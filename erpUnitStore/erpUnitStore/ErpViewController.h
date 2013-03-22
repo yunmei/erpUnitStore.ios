@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "YMGlobal.h"
+#import "ErpAppDelegate.h"
 @interface ErpViewController : UIViewController
 
 @end

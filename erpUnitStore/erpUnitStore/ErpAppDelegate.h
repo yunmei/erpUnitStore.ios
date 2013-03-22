@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MKNetworkEngine.h"
+
+#define ApplicationDelegate ((ErpAppDelegate *)[UIApplication sharedApplication].delegate)
 
 @class ErpViewController;
 
@@ -16,4 +19,5 @@
 
 @property (strong, nonatomic) ErpViewController *viewController;
 
+@property (strong, nonatomic) MKNetworkEngine *appEngine;
 @end

@@ -7,10 +7,11 @@
 //
 
 #import "ErpAppDelegate.h"
-
+#import "Constants.h"
 #import "ErpViewController.h"
 
 @implementation ErpAppDelegate
+@synthesize appEngine;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -19,6 +20,10 @@
     self.viewController = [[ErpViewController alloc] initWithNibName:@"ErpViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
+    //创建MKNetworkEngine
+    self.appEngine = [[MKNetworkEngine alloc]initWithHostName:API_HOSTNAME customHeaderFields:nil];
+    [self.appEngine useCache];
     return YES;
 }
 
