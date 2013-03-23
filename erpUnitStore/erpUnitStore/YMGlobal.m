@@ -29,4 +29,31 @@
         [button setBackgroundImage:fetchedImage forState:buttonState];
     }];
 }
+
++(MKNetworkEngine *)getEngine
+{
+    MKNetworkEngine *engine = [[MKNetworkEngine alloc]initWithHostName:API_HOSTNAME customHeaderFields:nil];
+    return engine;
+}
+
++(MKNetworkOperation *)getOpFromEngine:(MKNetworkEngine *)engine
+{
+    return [engine operationWithPath:API_BASEURL params:nil httpMethod:@"POST" ssl:NO];
+}
+
++(MKNetworkOperation *)setOperationParams:(NSString *)apiName apiparam:(NSString *)aipString execOp:(MKNetworkOperation *)op
+{
+    NSMutableString *baseString = [[NSMutableString alloc]initWithString:@"{\"myparams\":{\"version\":\"2.0\",\"format\":\"json\",\"appkey\":\"9832C19A-1BB4-4E67-920A-04CD5E1B25B2\",\"secretkey\":\"vi3lwuR2Dy7pOFkCKE0khZsxGn4tBJpl7ZTXeoPfhfPWXoOdueuPNMoBL6jmyFXWZ6LGhTF/ys2pfSPwazUcTisCYbkb5/NoVh5dM2BidlQlkJ6T2ZBdh82Q3nFD0yeKPfmhSAFgtzKOFK4RfTOa04EA2GuR4WUNVCw8mygWliA=\",\"apiname\":\""];
+    [baseString appendString:apiName];
+    [baseString appendString:@"\",\"apiparam\":\"{"];
+    [baseString appendString:aipString];
+    [baseString appendString:@"}\"}}"];
+    NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithObject:@"application/json" forKey:@"Content-Type"];
+    [dic setObject:@"application/json" forKey:@"Accept"];
+    [dic setObject:[NSString stringWithFormat:@"%d", [baseString length]] forKey:@"Content-Length"];
+    [op addHeaders:dic];
+    NSInputStream *stream = [[NSInputStream alloc]initWithData:[baseString dataUsingEncoding:NSUTF8StringEncoding]];
+    [op setUploadStream:stream];
+    return op;
+}
 @end
