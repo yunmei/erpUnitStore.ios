@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA718AE416FD76A300C71C3E /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA718AE216FD76A300C71C3E /* MenuViewController.m */; };
+		AA718AE516FD76A300C71C3E /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA718AE316FD76A300C71C3E /* MenuViewController.xib */; };
 		AAB8897F16FBF70B00ED946F /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB8896716FBF70B00ED946F /* NSObject+SBJson.m */; };
 		AAB8898016FBF70B00ED946F /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB8896A16FBF70B00ED946F /* SBJsonParser.m */; };
 		AAB8898116FBF70B00ED946F /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB8896C16FBF70B00ED946F /* SBJsonStreamParser.m */; };
@@ -36,6 +38,10 @@
 		AAB889BA16FBFF0700ED946F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB889B916FBFF0700ED946F /* QuartzCore.framework */; };
 		AAB889BC16FBFF1300ED946F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB889BB16FBFF1300ED946F /* Security.framework */; };
 		AAB889BE16FBFF3C00ED946F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB889BD16FBFF3C00ED946F /* libsqlite3.dylib */; };
+		AAD7387E16FEBBE500047C38 /* bj.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD7387D16FEBBE500047C38 /* bj.png */; };
+		AAD7388016FEBBED00047C38 /* bold.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD7387F16FEBBED00047C38 /* bold.png */; };
+		AAD7388216FEBD1C00047C38 /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD7388116FEBD1C00047C38 /* title.png */; };
+		AAD7388416FEBDEB00047C38 /* login_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD7388316FEBDEB00047C38 /* login_btn.png */; };
 		AAED059016FBEE41006843E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAED058F16FBEE41006843E8 /* UIKit.framework */; };
 		AAED059216FBEE41006843E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAED059116FBEE41006843E8 /* Foundation.framework */; };
 		AAED059416FBEE41006843E8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAED059316FBEE41006843E8 /* CoreGraphics.framework */; };
@@ -50,6 +56,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA718AE116FD76A300C71C3E /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		AA718AE216FD76A300C71C3E /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		AA718AE316FD76A300C71C3E /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		AAB8896616FBF70B00ED946F /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
 		AAB8896716FBF70B00ED946F /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
 		AAB8896816FBF70B00ED946F /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
@@ -104,6 +113,10 @@
 		AAB889B916FBFF0700ED946F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		AAB889BB16FBFF1300ED946F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		AAB889BD16FBFF3C00ED946F /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		AAD7387D16FEBBE500047C38 /* bj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bj.png; sourceTree = "<group>"; };
+		AAD7387F16FEBBED00047C38 /* bold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bold.png; sourceTree = "<group>"; };
+		AAD7388116FEBD1C00047C38 /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = "<group>"; };
+		AAD7388316FEBDEB00047C38 /* login_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_btn.png; sourceTree = "<group>"; };
 		AAED058C16FBEE41006843E8 /* erpUnitStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = erpUnitStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAED058F16FBEE41006843E8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AAED059116FBEE41006843E8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -142,6 +155,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA718AE016FD763F00C71C3E /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				AA718AE116FD76A300C71C3E /* MenuViewController.h */,
+				AA718AE216FD76A300C71C3E /* MenuViewController.m */,
+				AA718AE316FD76A300C71C3E /* MenuViewController.xib */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
 		AAB8896416FBF6F100ED946F /* Class */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +254,10 @@
 		AAB889A916FBF74900ED946F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AAD7388316FEBDEB00047C38 /* login_btn.png */,
+				AAD7388116FEBD1C00047C38 /* title.png */,
+				AAD7387F16FEBBED00047C38 /* bold.png */,
+				AAD7387D16FEBBE500047C38 /* bj.png */,
 				AAED05A516FBEE41006843E8 /* Default-568h@2x.png */,
 				AAED05A316FBEE41006843E8 /* Default@2x.png */,
 				AAED05A116FBEE41006843E8 /* Default.png */,
@@ -279,6 +306,7 @@
 				AAED05A716FBEE41006843E8 /* ErpViewController.h */,
 				AAED05A816FBEE41006843E8 /* ErpViewController.m */,
 				AAED05AA16FBEE41006843E8 /* ErpViewController.xib */,
+				AA718AE016FD763F00C71C3E /* Menu */,
 				AAED059616FBEE41006843E8 /* Supporting Files */,
 			);
 			path = erpUnitStore;
@@ -355,6 +383,11 @@
 				AAED05A416FBEE41006843E8 /* Default@2x.png in Resources */,
 				AAED05A616FBEE41006843E8 /* Default-568h@2x.png in Resources */,
 				AAED05AC16FBEE41006843E8 /* ErpViewController.xib in Resources */,
+				AA718AE516FD76A300C71C3E /* MenuViewController.xib in Resources */,
+				AAD7387E16FEBBE500047C38 /* bj.png in Resources */,
+				AAD7388016FEBBED00047C38 /* bold.png in Resources */,
+				AAD7388216FEBD1C00047C38 /* title.png in Resources */,
+				AAD7388416FEBDEB00047C38 /* login_btn.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +424,7 @@
 				AAB889A816FBF72F00ED946F /* Reachability.m in Sources */,
 				AAB889B116FBFA2000ED946F /* YMGlobal.m in Sources */,
 				AAB889B216FBFA2900ED946F /* MBProgressHUD.m in Sources */,
+				AA718AE416FD76A300C71C3E /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
