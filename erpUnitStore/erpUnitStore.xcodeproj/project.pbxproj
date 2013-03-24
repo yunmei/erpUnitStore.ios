@@ -42,6 +42,8 @@
 		AAD7388016FEBBED00047C38 /* bold.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD7387F16FEBBED00047C38 /* bold.png */; };
 		AAD7388216FEBD1C00047C38 /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD7388116FEBD1C00047C38 /* title.png */; };
 		AAD7388416FEBDEB00047C38 /* login_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD7388316FEBDEB00047C38 /* login_btn.png */; };
+		AAD7388716FEC2AC00047C38 /* YMDbClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD7388616FEC2AC00047C38 /* YMDbClass.m */; };
+		AAD7388A16FEC42A00047C38 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD7388916FEC42A00047C38 /* UserModel.m */; };
 		AAED059016FBEE41006843E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAED058F16FBEE41006843E8 /* UIKit.framework */; };
 		AAED059216FBEE41006843E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAED059116FBEE41006843E8 /* Foundation.framework */; };
 		AAED059416FBEE41006843E8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAED059316FBEE41006843E8 /* CoreGraphics.framework */; };
@@ -117,6 +119,10 @@
 		AAD7387F16FEBBED00047C38 /* bold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bold.png; sourceTree = "<group>"; };
 		AAD7388116FEBD1C00047C38 /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = "<group>"; };
 		AAD7388316FEBDEB00047C38 /* login_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_btn.png; sourceTree = "<group>"; };
+		AAD7388516FEC2AC00047C38 /* YMDbClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMDbClass.h; sourceTree = "<group>"; };
+		AAD7388616FEC2AC00047C38 /* YMDbClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMDbClass.m; sourceTree = "<group>"; };
+		AAD7388816FEC42A00047C38 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		AAD7388916FEC42A00047C38 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		AAED058C16FBEE41006843E8 /* erpUnitStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = erpUnitStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAED058F16FBEE41006843E8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AAED059116FBEE41006843E8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -168,6 +174,10 @@
 		AAB8896416FBF6F100ED946F /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				AAD7388816FEC42A00047C38 /* UserModel.h */,
+				AAD7388916FEC42A00047C38 /* UserModel.m */,
+				AAD7388516FEC2AC00047C38 /* YMDbClass.h */,
+				AAD7388616FEC2AC00047C38 /* YMDbClass.m */,
 				AAB889AF16FBFA2000ED946F /* YMGlobal.h */,
 				AAB889B016FBFA2000ED946F /* YMGlobal.m */,
 				AAB889AD16FBF9FC00ED946F /* MBProgressHUD.h */,
@@ -425,6 +435,8 @@
 				AAB889B116FBFA2000ED946F /* YMGlobal.m in Sources */,
 				AAB889B216FBFA2900ED946F /* MBProgressHUD.m in Sources */,
 				AA718AE416FD76A300C71C3E /* MenuViewController.m in Sources */,
+				AAD7388716FEC2AC00047C38 /* YMDbClass.m in Sources */,
+				AAD7388A16FEC42A00047C38 /* UserModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

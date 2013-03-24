@@ -43,36 +43,43 @@
 //点击登陆的时候
 - (IBAction)onLoginButtonPressed:(id)sender {
     //正式发布的时候将判断去掉
-//    if([self.userNameTextFeild.text isEqualToString:@""]||[self.pwdTextFeild.text isEqualToString:@""])
-//    {
-//        UIAlertView *loginInfomationAlert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"请将用户名密码输入完整!" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-//        [loginInfomationAlert show];
-//    }else{
-//        if([self.userInformationArray count]>0)
-//        {
-//            int i = 0;
-//            for(id o in self.userInformationArray)
-//            {
-//                NSMutableDictionary *unitUserInformationDictionary = o;
-//                if([[unitUserInformationDictionary objectForKey:@"User_Name"] isEqualToString:self.userNameTextFeild.text])
-//                {
-//                    i++;
-//                    if([[unitUserInformationDictionary objectForKey:@"Password"] isEqualToString:self.pwdTextFeild.text])
-//                    {
-//                        NSLog(@"登陆成功");
-//                    }else{
-//                        UIAlertView *loginInfomationAlert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"密码错误，请重新输入!" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-//                        [loginInfomationAlert show];
-//                    }
-//                }
-//            }
-//            if(i == 0)
-//            {
-//                UIAlertView *loginInfomationAlert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"该用户名不存在!" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-//                [loginInfomationAlert show];
-//            }
-//        }
-//    }
+    if([self.userNameTextFeild.text isEqualToString:@""]||[self.pwdTextFeild.text isEqualToString:@""])
+    {
+        UIAlertView *loginInfomationAlert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"请将用户名密码输入完整!" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [loginInfomationAlert show];
+    }else{
+        if([self.userInformationArray count]>0)
+        {
+            int i = 0;
+            for(id o in self.userInformationArray)
+            {
+                NSMutableDictionary *unitUserInformationDictionary = o;
+                if([[unitUserInformationDictionary objectForKey:@"User_Name"] isEqualToString:self.userNameTextFeild.text])
+                {
+                    i++;
+                    if([[unitUserInformationDictionary objectForKey:@"Password"] isEqualToString:self.pwdTextFeild.text])
+                    {
+                        UserModel *user = [[UserModel alloc]init];
+                        user.userid = [unitUserInformationDictionary objectForKey:@"User_ID"];
+                        user.username = [unitUserInformationDictionary objectForKey:@"User_Name"];
+                        user.password = [unitUserInformationDictionary objectForKey:@"Password"];
+                        if([user login])
+                        {
+                            NSLog(@"dengluchenggong");
+                        }
+                    }else{
+                        UIAlertView *loginInfomationAlert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"密码错误，请重新输入!" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+                        [loginInfomationAlert show];
+                    }
+                }
+            }
+            if(i == 0)
+            {
+                UIAlertView *loginInfomationAlert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"该用户名不存在!" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+                [loginInfomationAlert show];
+            }
+        }
+    }
 
     
 }

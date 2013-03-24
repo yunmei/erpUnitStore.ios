@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "YMGlobal.h"
 #import "ErpAppDelegate.h"
+#import "UserModel.h"
 @interface ErpViewController : UIViewController<UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *userNameTextFeild;
 @property (strong, nonatomic) IBOutlet UITextField *pwdTextFeild;

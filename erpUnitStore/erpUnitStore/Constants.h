@@ -10,3 +10,4 @@
 #define API_HOSTNAME    @"www.yestyler.com:55177"
 #define API_BASEURL     @"posapi.svc/posapi"
 #define API_METHOD      @"POST"
+#define DB_NAME         @"erp.db"
