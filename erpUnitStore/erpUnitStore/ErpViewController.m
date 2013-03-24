@@ -65,7 +65,8 @@
                         user.password = [unitUserInformationDictionary objectForKey:@"Password"];
                         if([user login])
                         {
-                            NSLog(@"dengluchenggong");
+                            MenuViewController *menuVC = [[MenuViewController alloc]init];
+                            [self presentViewController:menuVC animated:NO completion:nil];
                         }
                     }else{
                         UIAlertView *loginInfomationAlert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"密码错误，请重新输入!" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
