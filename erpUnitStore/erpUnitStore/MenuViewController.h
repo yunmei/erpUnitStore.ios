@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "SellChartViewController.h"
 @interface MenuViewController : UIViewController
 
 @end

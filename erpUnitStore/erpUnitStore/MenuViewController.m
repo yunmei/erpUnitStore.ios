@@ -38,6 +38,10 @@
 
 //销售管理
 - (IBAction)xsManage:(id)sender {
+     SellChartViewController *sellChartVC = [[SellChartViewController alloc]init];
+    UINavigationController *sellNavigation = [[UINavigationController alloc]initWithRootViewController:sellChartVC];
+    [self presentViewController:sellNavigation animated:YES completion:nil];
+    
 }
 
 //采购管理

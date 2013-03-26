@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CorePlotHeaders/CorePlot-CocoaTouch.h"
+@interface SellChartViewController : UIViewController<CPTPlotDataSource>
 
-@interface SellChartViewController : UIViewController
+@property (strong, nonatomic)NSMutableArray *monthDataArray;
 
 @end
