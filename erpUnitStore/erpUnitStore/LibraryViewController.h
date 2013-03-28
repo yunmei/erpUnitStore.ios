@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "LibraryCell.h"
+#import "YMUIButton.h"
 @interface LibraryViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) NSMutableArray *libraryArray;
 @end

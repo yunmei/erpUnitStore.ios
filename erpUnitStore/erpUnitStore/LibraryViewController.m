@@ -56,7 +56,16 @@
     LibraryCell *cell = (LibraryCell *)[tableView dequeueReusableCellWithIdentifier:identifier];
     if(cell == nil)
     {
+        UIButton *cellborder = [UIButton buttonWithType:UIButtonTypeCustom];
+        [cellborder setFrame:CGRectMake(1, 1, 318, 58)];
+        cellborder.layer.cornerRadius = 5.0;
+        cellborder.layer.borderWidth = 1.0;
+        cellborder.layer.borderColor = [YMUIButton CreateCGColorRef:255.0 greenNumber:255.0 blueNumber:255.0 alphaNumber:1.0];
+        [cellborder setBackgroundColor:[UIColor clearColor]];
+        cellborder.enabled = NO;
         cell = [[LibraryCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        [cell addSubview:cellborder];
         [cell addSubview:cell.nameLable];
         [cell addSubview:cell.timeLable];
         [cell addSubview:cell.numberLable];

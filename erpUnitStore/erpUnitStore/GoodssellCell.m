@@ -33,7 +33,7 @@
         _nameLable = [[UILabel alloc]initWithFrame:CGRectMake(10, 5, 300, 20)];
         [_nameLable setBackgroundColor:[UIColor clearColor]];
         [_nameLable setFont:[UIFont systemFontOfSize:15.0]];
-        [_nameLable setTextColor:[UIColor whiteColor]];
+        [_nameLable setTextColor:[UIColor colorWithRed:255/255 green:227/255.0 blue:129/255.0 alpha:1.0]];
     }
     return _nameLable;
 }
@@ -45,7 +45,7 @@
         _numberLable = [[UILabel alloc]initWithFrame:CGRectMake(10, 30, 80, 20)];
         [_numberLable setBackgroundColor:[UIColor clearColor]];
         [_numberLable setFont:[UIFont systemFontOfSize:13.0]];
-        [_numberLable setTextColor:[UIColor whiteColor]];
+        [_numberLable setTextColor:[UIColor colorWithRed:255/255 green:227/255.0 blue:129/255.0 alpha:0.3]];
     }
     return _numberLable;
 }
@@ -56,7 +56,7 @@
         _timeLable = [[UILabel alloc]initWithFrame:CGRectMake(200, 30, 200, 20)];
         [_timeLable setBackgroundColor:[UIColor clearColor]];
         [_timeLable setFont:[UIFont systemFontOfSize:12.0]];
-        [_timeLable setTextColor:[UIColor whiteColor]];
+        [_timeLable setTextColor:[UIColor colorWithRed:255/255 green:227/255.0 blue:129/255.0 alpha:0.7]];
     }
     return _timeLable;
 }

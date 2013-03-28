@@ -34,7 +34,7 @@
     {
         _goodsNameLable = [[UILabel alloc]initWithFrame:CGRectMake(10, 5, 300, 20)];
         [_goodsNameLable setBackgroundColor:[UIColor clearColor]];
-        [_goodsNameLable setTextColor:[UIColor whiteColor]];
+        [_goodsNameLable setTextColor:[UIColor colorWithRed:255/255 green:227/255.0 blue:129/255.0 alpha:1.0]];
         [_goodsNameLable setFont:[UIFont systemFontOfSize:14.0]];
     }
     
@@ -47,7 +47,7 @@
     {
         _invertoryLable = [[UILabel alloc]initWithFrame:CGRectMake(230, 5, 70, 20)];
         [_invertoryLable setBackgroundColor:[UIColor clearColor]];
-        [_invertoryLable setTextColor:[UIColor whiteColor]];
+        [_invertoryLable setTextColor:[UIColor colorWithRed:255/255 green:227/255.0 blue:129/255.0 alpha:0.3]];
         [_invertoryLable setFont:[UIFont systemFontOfSize:14.0]];
     }
     return _invertoryLable;

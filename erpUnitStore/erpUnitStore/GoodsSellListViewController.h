@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <QuartzCore/QuartzCore.h>
+#import "YMUIButton.h"
 @interface GoodsSellListViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic)NSMutableArray *goodsSellInformationArray;
 @end

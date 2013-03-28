@@ -11,6 +11,8 @@
 #import "SBJson.h"
 #import "YMGlobal.h"
 #import "MBProgressHUD.h"
+#import <QuartzCore/QuartzCore.h>
+#import "YMUIButton.h"
 @interface SuppliersListViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic)NSMutableArray *supplierListArray;
 @end
