@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "SellChartViewController.h"
+#import "YMGlobal.h"
+#import "SBJson.h"
+#import "MKNetworkKit.h"
+#import "LibraryViewController.h"
 @interface MenuViewController : UIViewController
 
 @end

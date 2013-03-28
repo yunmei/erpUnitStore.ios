@@ -7,8 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA27A24B1702D2740089463E /* GoodsInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA27A2491702D2740089463E /* GoodsInformationViewController.m */; };
+		AA27A24C1702D2740089463E /* GoodsInformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA27A24A1702D2740089463E /* GoodsInformationViewController.xib */; };
 		AA718AE416FD76A300C71C3E /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA718AE216FD76A300C71C3E /* MenuViewController.m */; };
 		AA718AE516FD76A300C71C3E /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA718AE316FD76A300C71C3E /* MenuViewController.xib */; };
+		AA7D5CA2170298FA00B6BA2D /* GoodsInventoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7D5CA0170298FA00B6BA2D /* GoodsInventoryViewController.m */; };
+		AA7D5CA3170298FA00B6BA2D /* GoodsInventoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA7D5CA1170298FA00B6BA2D /* GoodsInventoryViewController.xib */; };
+		AA7D5CA717029DD100B6BA2D /* GoodsInvestoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7D5CA617029DD100B6BA2D /* GoodsInvestoryCell.m */; };
+		AAAF66FA170405350074FF90 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AAAF66F9170405350074FF90 /* Default.png */; };
+		AAAF66FE17041DB60074FF90 /* GoodsSellListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAF66FC17041DB60074FF90 /* GoodsSellListViewController.m */; };
+		AAAF66FF17041DB60074FF90 /* GoodsSellListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAAF66FD17041DB60074FF90 /* GoodsSellListViewController.xib */; };
+		AAAF6702170420F10074FF90 /* GoodssellCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAF6701170420F10074FF90 /* GoodssellCell.m */; };
 		AAB6562516FEF50B005C3C3A /* SellChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB6562316FEF50B005C3C3A /* SellChartViewController.m */; };
 		AAB6562616FEF50B005C3C3A /* SellChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB6562416FEF50B005C3C3A /* SellChartViewController.xib */; };
 		AAB6562816FEF900005C3C3A /* tj_bj.png in Resources */ = {isa = PBXBuildFile; fileRef = AAB6562716FEF900005C3C3A /* tj_bj.png */; };
@@ -41,6 +50,13 @@
 		AAB889BA16FBFF0700ED946F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB889B916FBFF0700ED946F /* QuartzCore.framework */; };
 		AAB889BC16FBFF1300ED946F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB889BB16FBFF1300ED946F /* Security.framework */; };
 		AAB889BE16FBFF3C00ED946F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB889BD16FBFF3C00ED946F /* libsqlite3.dylib */; };
+		AABF7E661703D43F0094CF3B /* SuppliersListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AABF7E641703D43F0094CF3B /* SuppliersListViewController.m */; };
+		AABF7E671703D43F0094CF3B /* SuppliersListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AABF7E651703D43F0094CF3B /* SuppliersListViewController.xib */; };
+		AABF7E6B1703D4F30094CF3B /* LibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AABF7E691703D4F30094CF3B /* LibraryViewController.m */; };
+		AABF7E6C1703D4F30094CF3B /* LibraryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AABF7E6A1703D4F30094CF3B /* LibraryViewController.xib */; };
+		AABF7E6F1703DC300094CF3B /* LibraryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AABF7E6E1703DC2F0094CF3B /* LibraryCell.m */; };
+		AABF7E731703E5F00094CF3B /* LibraryInformationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AABF7E711703E5EF0094CF3B /* LibraryInformationController.m */; };
+		AABF7E741703E5F00094CF3B /* LibraryInformationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AABF7E721703E5EF0094CF3B /* LibraryInformationController.xib */; };
 		AAD7387E16FEBBE500047C38 /* bj.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD7387D16FEBBE500047C38 /* bj.png */; };
 		AAD7388016FEBBED00047C38 /* bold.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD7387F16FEBBED00047C38 /* bold.png */; };
 		AAD7388216FEBD1C00047C38 /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD7388116FEBD1C00047C38 /* title.png */; };
@@ -61,7 +77,6 @@
 		AAED059A16FBEE41006843E8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AAED059816FBEE41006843E8 /* InfoPlist.strings */; };
 		AAED059C16FBEE41006843E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAED059B16FBEE41006843E8 /* main.m */; };
 		AAED05A016FBEE41006843E8 /* ErpAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAED059F16FBEE41006843E8 /* ErpAppDelegate.m */; };
-		AAED05A216FBEE41006843E8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AAED05A116FBEE41006843E8 /* Default.png */; };
 		AAED05A416FBEE41006843E8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AAED05A316FBEE41006843E8 /* Default@2x.png */; };
 		AAED05A616FBEE41006843E8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AAED05A516FBEE41006843E8 /* Default-568h@2x.png */; };
 		AAED05A916FBEE41006843E8 /* ErpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAED05A816FBEE41006843E8 /* ErpViewController.m */; };
@@ -69,9 +84,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA27A2481702D2740089463E /* GoodsInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsInformationViewController.h; sourceTree = "<group>"; };
+		AA27A2491702D2740089463E /* GoodsInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsInformationViewController.m; sourceTree = "<group>"; };
+		AA27A24A1702D2740089463E /* GoodsInformationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoodsInformationViewController.xib; sourceTree = "<group>"; };
 		AA718AE116FD76A300C71C3E /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		AA718AE216FD76A300C71C3E /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		AA718AE316FD76A300C71C3E /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		AA7D5C9F170298FA00B6BA2D /* GoodsInventoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsInventoryViewController.h; sourceTree = "<group>"; };
+		AA7D5CA0170298FA00B6BA2D /* GoodsInventoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsInventoryViewController.m; sourceTree = "<group>"; };
+		AA7D5CA1170298FA00B6BA2D /* GoodsInventoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoodsInventoryViewController.xib; sourceTree = "<group>"; };
+		AA7D5CA517029DD100B6BA2D /* GoodsInvestoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsInvestoryCell.h; sourceTree = "<group>"; };
+		AA7D5CA617029DD100B6BA2D /* GoodsInvestoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsInvestoryCell.m; sourceTree = "<group>"; };
+		AAAF66F9170405350074FF90 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		AAAF66FB17041DB60074FF90 /* GoodsSellListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsSellListViewController.h; sourceTree = "<group>"; };
+		AAAF66FC17041DB60074FF90 /* GoodsSellListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsSellListViewController.m; sourceTree = "<group>"; };
+		AAAF66FD17041DB60074FF90 /* GoodsSellListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoodsSellListViewController.xib; sourceTree = "<group>"; };
+		AAAF6700170420F10074FF90 /* GoodssellCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodssellCell.h; sourceTree = "<group>"; };
+		AAAF6701170420F10074FF90 /* GoodssellCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodssellCell.m; sourceTree = "<group>"; };
 		AAB6562216FEF50B005C3C3A /* SellChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SellChartViewController.h; sourceTree = "<group>"; };
 		AAB6562316FEF50B005C3C3A /* SellChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SellChartViewController.m; sourceTree = "<group>"; };
 		AAB6562416FEF50B005C3C3A /* SellChartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SellChartViewController.xib; sourceTree = "<group>"; };
@@ -130,6 +159,17 @@
 		AAB889B916FBFF0700ED946F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		AAB889BB16FBFF1300ED946F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		AAB889BD16FBFF3C00ED946F /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		AABF7E631703D43F0094CF3B /* SuppliersListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuppliersListViewController.h; sourceTree = "<group>"; };
+		AABF7E641703D43F0094CF3B /* SuppliersListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuppliersListViewController.m; sourceTree = "<group>"; };
+		AABF7E651703D43F0094CF3B /* SuppliersListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuppliersListViewController.xib; sourceTree = "<group>"; };
+		AABF7E681703D4F30094CF3B /* LibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryViewController.h; sourceTree = "<group>"; };
+		AABF7E691703D4F30094CF3B /* LibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryViewController.m; sourceTree = "<group>"; };
+		AABF7E6A1703D4F30094CF3B /* LibraryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LibraryViewController.xib; sourceTree = "<group>"; };
+		AABF7E6D1703DC2F0094CF3B /* LibraryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryCell.h; sourceTree = "<group>"; };
+		AABF7E6E1703DC2F0094CF3B /* LibraryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryCell.m; sourceTree = "<group>"; };
+		AABF7E701703E5EF0094CF3B /* LibraryInformationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryInformationController.h; sourceTree = "<group>"; };
+		AABF7E711703E5EF0094CF3B /* LibraryInformationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryInformationController.m; sourceTree = "<group>"; };
+		AABF7E721703E5EF0094CF3B /* LibraryInformationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LibraryInformationController.xib; sourceTree = "<group>"; };
 		AAD7387D16FEBBE500047C38 /* bj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bj.png; sourceTree = "<group>"; };
 		AAD7387F16FEBBED00047C38 /* bold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bold.png; sourceTree = "<group>"; };
 		AAD7388116FEBD1C00047C38 /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = "<group>"; };
@@ -235,7 +275,6 @@
 		AAED059D16FBEE41006843E8 /* erpUnitStore-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "erpUnitStore-Prefix.pch"; sourceTree = "<group>"; };
 		AAED059E16FBEE41006843E8 /* ErpAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErpAppDelegate.h; sourceTree = "<group>"; };
 		AAED059F16FBEE41006843E8 /* ErpAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ErpAppDelegate.m; sourceTree = "<group>"; };
-		AAED05A116FBEE41006843E8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		AAED05A316FBEE41006843E8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		AAED05A516FBEE41006843E8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		AAED05A716FBEE41006843E8 /* ErpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErpViewController.h; sourceTree = "<group>"; };
@@ -274,14 +313,49 @@
 			name = Menu;
 			sourceTree = "<group>";
 		};
-		AAB6562116FEF4C9005C3C3A /* chart */ = {
+		AA7D5C9E170298D300B6BA2D /* Inventory */ = {
+			isa = PBXGroup;
+			children = (
+				AA7D5C9F170298FA00B6BA2D /* GoodsInventoryViewController.h */,
+				AA7D5CA0170298FA00B6BA2D /* GoodsInventoryViewController.m */,
+				AA7D5CA1170298FA00B6BA2D /* GoodsInventoryViewController.xib */,
+				AA27A2481702D2740089463E /* GoodsInformationViewController.h */,
+				AA27A2491702D2740089463E /* GoodsInformationViewController.m */,
+				AA27A24A1702D2740089463E /* GoodsInformationViewController.xib */,
+				AABF7E681703D4F30094CF3B /* LibraryViewController.h */,
+				AABF7E691703D4F30094CF3B /* LibraryViewController.m */,
+				AABF7E6A1703D4F30094CF3B /* LibraryViewController.xib */,
+				AABF7E701703E5EF0094CF3B /* LibraryInformationController.h */,
+				AABF7E711703E5EF0094CF3B /* LibraryInformationController.m */,
+				AABF7E721703E5EF0094CF3B /* LibraryInformationController.xib */,
+			);
+			name = Inventory;
+			sourceTree = "<group>";
+		};
+		AA7D5CA417029D9F00B6BA2D /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				AA7D5CA517029DD100B6BA2D /* GoodsInvestoryCell.h */,
+				AA7D5CA617029DD100B6BA2D /* GoodsInvestoryCell.m */,
+				AABF7E6D1703DC2F0094CF3B /* LibraryCell.h */,
+				AABF7E6E1703DC2F0094CF3B /* LibraryCell.m */,
+				AAAF6700170420F10074FF90 /* GoodssellCell.h */,
+				AAAF6701170420F10074FF90 /* GoodssellCell.m */,
+			);
+			name = CustomCell;
+			sourceTree = "<group>";
+		};
+		AAB6562116FEF4C9005C3C3A /* Sellchart */ = {
 			isa = PBXGroup;
 			children = (
 				AAB6562216FEF50B005C3C3A /* SellChartViewController.h */,
 				AAB6562316FEF50B005C3C3A /* SellChartViewController.m */,
 				AAB6562416FEF50B005C3C3A /* SellChartViewController.xib */,
+				AAAF66FB17041DB60074FF90 /* GoodsSellListViewController.h */,
+				AAAF66FC17041DB60074FF90 /* GoodsSellListViewController.m */,
+				AAAF66FD17041DB60074FF90 /* GoodsSellListViewController.xib */,
 			);
-			name = chart;
+			name = Sellchart;
 			sourceTree = "<group>";
 		};
 		AAB8896416FBF6F100ED946F /* Class */ = {
@@ -377,6 +451,7 @@
 		AAB889A916FBF74900ED946F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AAAF66F9170405350074FF90 /* Default.png */,
 				AAB6562716FEF900005C3C3A /* tj_bj.png */,
 				AAD7389716FEE04900047C38 /* yg.png */,
 				AAD7389516FED37D00047C38 /* bold_on.png */,
@@ -391,9 +466,18 @@
 				AAD7387D16FEBBE500047C38 /* bj.png */,
 				AAED05A516FBEE41006843E8 /* Default-568h@2x.png */,
 				AAED05A316FBEE41006843E8 /* Default@2x.png */,
-				AAED05A116FBEE41006843E8 /* Default.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		AABF7E621703D41E0094CF3B /* suppliers */ = {
+			isa = PBXGroup;
+			children = (
+				AABF7E631703D43F0094CF3B /* SuppliersListViewController.h */,
+				AABF7E641703D43F0094CF3B /* SuppliersListViewController.m */,
+				AABF7E651703D43F0094CF3B /* SuppliersListViewController.xib */,
+			);
+			name = suppliers;
 			sourceTree = "<group>";
 		};
 		AAE062BB16FFFE6D000C5E98 /* CorePlotHeaders */ = {
@@ -524,7 +608,9 @@
 				AAED05A716FBEE41006843E8 /* ErpViewController.h */,
 				AAED05A816FBEE41006843E8 /* ErpViewController.m */,
 				AAED05AA16FBEE41006843E8 /* ErpViewController.xib */,
-				AAB6562116FEF4C9005C3C3A /* chart */,
+				AABF7E621703D41E0094CF3B /* suppliers */,
+				AA7D5C9E170298D300B6BA2D /* Inventory */,
+				AAB6562116FEF4C9005C3C3A /* Sellchart */,
 				AA718AE016FD763F00C71C3E /* Menu */,
 				AAED059616FBEE41006843E8 /* Supporting Files */,
 			);
@@ -534,6 +620,7 @@
 		AAED059616FBEE41006843E8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AA7D5CA417029D9F00B6BA2D /* CustomCell */,
 				AAE062BB16FFFE6D000C5E98 /* CorePlotHeaders */,
 				AAB889A916FBF74900ED946F /* Images */,
 				AAB8896416FBF6F100ED946F /* Class */,
@@ -599,7 +686,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAED059A16FBEE41006843E8 /* InfoPlist.strings in Resources */,
-				AAED05A216FBEE41006843E8 /* Default.png in Resources */,
 				AAED05A416FBEE41006843E8 /* Default@2x.png in Resources */,
 				AAED05A616FBEE41006843E8 /* Default-568h@2x.png in Resources */,
 				AAED05AC16FBEE41006843E8 /* ErpViewController.xib in Resources */,
@@ -617,6 +703,13 @@
 				AAD7389816FEE04A00047C38 /* yg.png in Resources */,
 				AAB6562616FEF50B005C3C3A /* SellChartViewController.xib in Resources */,
 				AAB6562816FEF900005C3C3A /* tj_bj.png in Resources */,
+				AA7D5CA3170298FA00B6BA2D /* GoodsInventoryViewController.xib in Resources */,
+				AA27A24C1702D2740089463E /* GoodsInformationViewController.xib in Resources */,
+				AABF7E671703D43F0094CF3B /* SuppliersListViewController.xib in Resources */,
+				AABF7E6C1703D4F30094CF3B /* LibraryViewController.xib in Resources */,
+				AABF7E741703E5F00094CF3B /* LibraryInformationController.xib in Resources */,
+				AAAF66FA170405350074FF90 /* Default.png in Resources */,
+				AAAF66FF17041DB60074FF90 /* GoodsSellListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -657,6 +750,15 @@
 				AAD7388716FEC2AC00047C38 /* YMDbClass.m in Sources */,
 				AAD7388A16FEC42A00047C38 /* UserModel.m in Sources */,
 				AAB6562516FEF50B005C3C3A /* SellChartViewController.m in Sources */,
+				AA7D5CA2170298FA00B6BA2D /* GoodsInventoryViewController.m in Sources */,
+				AA7D5CA717029DD100B6BA2D /* GoodsInvestoryCell.m in Sources */,
+				AA27A24B1702D2740089463E /* GoodsInformationViewController.m in Sources */,
+				AABF7E661703D43F0094CF3B /* SuppliersListViewController.m in Sources */,
+				AABF7E6B1703D4F30094CF3B /* LibraryViewController.m in Sources */,
+				AABF7E6F1703DC300094CF3B /* LibraryCell.m in Sources */,
+				AABF7E731703E5F00094CF3B /* LibraryInformationController.m in Sources */,
+				AAAF66FE17041DB60074FF90 /* GoodsSellListViewController.m in Sources */,
+				AAAF6702170420F10074FF90 /* GoodssellCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

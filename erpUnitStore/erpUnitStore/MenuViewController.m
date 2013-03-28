@@ -7,7 +7,7 @@
 //
 
 #import "MenuViewController.h"
-
+#import "GoodsInventoryViewController.h"
 @interface MenuViewController ()
 
 @end
@@ -38,6 +38,7 @@
 
 //销售管理
 - (IBAction)xsManage:(id)sender {
+    
      SellChartViewController *sellChartVC = [[SellChartViewController alloc]init];
     UINavigationController *sellNavigation = [[UINavigationController alloc]initWithRootViewController:sellChartVC];
     [self presentViewController:sellNavigation animated:YES completion:nil];
@@ -46,21 +47,64 @@
 
 //采购管理
 - (IBAction)cgManage:(id)sender {
+    MKNetworkEngine *engine = [YMGlobal getEngine];
+    MKNetworkOperation *op = [YMGlobal getOpFromEngine:engine];
+    op = [YMGlobal setOperationParams:@"Get.Library_Statistical" apiparam:@"\\\"wherestr\\\":\\\"\\\"" execOp:op];
+    [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
+        NSLog(@"completedOperation%@",[completedOperation responseString]);
+        SBJsonParser *parser = [[SBJsonParser alloc]init];
+        NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
+        if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
+        {
+            NSMutableArray *bodyArray = [parser objectWithString:[data objectForKey:@"body"]];
+            LibraryViewController *libraryVC = [[LibraryViewController alloc]init];
+            UINavigationController *libraryNavigation = [[UINavigationController alloc]initWithRootViewController:libraryVC];
+            libraryVC.libraryArray = bodyArray;
+            [self presentViewController:libraryNavigation animated:YES completion:nil];
+//            GoodsInventoryViewController *goodsInventoryVC = [[GoodsInventoryViewController alloc]init];
+//            goodsInventoryVC.goodsInventoryArray = bodyArray;
+//            UINavigationController *inventoryNavigation = [[UINavigationController alloc]initWithRootViewController:goodsInventoryVC];
+//            [self presentViewController:inventoryNavigation animated:YES completion:nil];
+        }
+    } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
+        NSLog(@"error%@",[completedOperation responseString]);
+    }];
+    [engine enqueueOperation:op];
+    
 }
 
 //库存管理
 - (IBAction)kcManage:(id)sender {
+    MKNetworkEngine *engine = [YMGlobal getEngine];
+    MKNetworkOperation *op = [YMGlobal getOpFromEngine:engine];
+    op = [YMGlobal setOperationParams:@"Get.InventoryList" apiparam:@"\\\"wherestr\\\":\\\"\\\"" execOp:op];
+    [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
+        SBJsonParser *parser = [[SBJsonParser alloc]init];
+        NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
+       if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
+       {
+           NSMutableArray *bodyArray = [parser objectWithString:[data objectForKey:@"body"]];
+           GoodsInventoryViewController *goodsInventoryVC = [[GoodsInventoryViewController alloc]init];
+           goodsInventoryVC.goodsInventoryArray = bodyArray;
+            UINavigationController *inventoryNavigation = [[UINavigationController alloc]initWithRootViewController:goodsInventoryVC];
+           [self presentViewController:inventoryNavigation animated:YES completion:nil];
+       }
+    } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
+        NSLog(@"error%@",[completedOperation responseString]);
+    }];
+    [engine enqueueOperation:op];
 }
 
-//应付账款
+//供应商管理
 - (IBAction)payBill:(id)sender {
+    
 }
 
 //应收账款
 - (IBAction)getBill:(id)sender {
 }
 
-//供应商管理
+//应付账款
 - (IBAction)suppliersManage:(id)sender {
 }
 
