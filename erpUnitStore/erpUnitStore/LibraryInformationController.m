@@ -39,7 +39,7 @@
 {
     [super viewDidLoad];
     self.navigationItem.title = @"入库详情";
-    NSLog(@"self.libraryInfoDictionary%@",self.libraryInfoDictionary);
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bj.png"]]];
     // Do any additional setup after loading the view from its nib.
     [self.goodsNameLabel setText:[NSString stringWithFormat:@"%@",[self.libraryInfoDictionary objectForKey:@"Goods_Name"]]];
     [self.typeNameLabel setText:[NSString stringWithFormat:@"%@",[self.libraryInfoDictionary objectForKey:@"Type_Name"]]];

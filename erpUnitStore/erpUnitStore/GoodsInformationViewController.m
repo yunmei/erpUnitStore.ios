@@ -38,6 +38,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bj.png"]]];
     [lastYearLabel setText:[NSString stringWithFormat:@"销售分析 : 去年%@月份销售统计分析",self.monthString]];
     // Do any additional setup after loading the view from its nib.
     //[self.view setBackgroundColor:[UIColor colorWithRed:73/255.0 green:73/255.0 blue:73/255.0 alpha:1.0]];

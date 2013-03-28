@@ -66,6 +66,17 @@
     }
 }
 
+
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    if(textField.tag ==1)
+    {
+        CGPoint center = self.view.center;
+        [self.view setCenter:CGPointMake(center.x, center.y+65)];
+
+    }
+}
+
 - (IBAction)disChange:(id)sender {
     [self.pwdFeild resignFirstResponder];
     [self.userNameFeild resignFirstResponder];
@@ -76,6 +87,11 @@
 -(void)textFieldDidBeginEditing:(UITextField *)textField
 {
     [self.view addGestureRecognizer:self.tapGesture];
+    if(textField.tag == 1)
+    {
+        CGPoint center = self.view.center;
+        [self.view setCenter:CGPointMake(center.x, center.y-65)];
+    }
 }
 
 - (void)viewDidUnload {

@@ -36,6 +36,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.navigationItem.title = @"供应商信息";
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bj.png"]]];
     [self.providerAddressLabel setNumberOfLines:0];
             NSLog(@"supplier%@",self.supplierDictionary);
     [self.providerNameLabel setText:[NSString stringWithFormat:@"%@",[self.supplierDictionary objectForKey:@"Provider_name"]]];

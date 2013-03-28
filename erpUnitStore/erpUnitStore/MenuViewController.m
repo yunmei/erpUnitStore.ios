@@ -9,6 +9,7 @@
 #import "MenuViewController.h"
 #import "GoodsInventoryViewController.h"
 #import "SettingViewController.h"
+#import "AboutUsViewController.h"
 @interface MenuViewController ()
 
 @end
@@ -142,9 +143,14 @@
 
 //关于
 - (IBAction)about:(id)sender {
+    AboutUsViewController *aboutVC = [[AboutUsViewController alloc]init];
+    UINavigationController *aboutNavigation = [[UINavigationController alloc]initWithRootViewController:aboutVC];
+    [self presentViewController:aboutNavigation animated:YES completion:nil];
 }
 //消息
 - (IBAction)message:(id)sender {
+    UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"您目前没有收到任何消息!" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    [alert show];
 }
 //设置
 - (IBAction)site:(id)sender {
