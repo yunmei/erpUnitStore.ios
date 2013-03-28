@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "MKNetworkEngine.h"
-
+#import "Constants.h"
+#import "SlideViewController.h"
 #define ApplicationDelegate ((ErpAppDelegate *)[UIApplication sharedApplication].delegate)
 
 @class ErpViewController;
@@ -19,5 +20,6 @@
 
 @property (strong, nonatomic) ErpViewController *viewController;
 
+@property (strong, nonatomic) SlideViewController *viewController1;
 @property (strong, nonatomic) MKNetworkEngine *appEngine;
 @end

@@ -8,6 +8,7 @@
 
 #import "MenuViewController.h"
 #import "GoodsInventoryViewController.h"
+#import "SettingViewController.h"
 @interface MenuViewController ()
 
 @end
@@ -28,6 +29,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bj.png"]]];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(relogin:) name:@"INeedToLogin1" object:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -97,7 +99,29 @@
 
 //供应商管理
 - (IBAction)payBill:(id)sender {
-    
+    MKNetworkEngine *engine = [YMGlobal getEngine];
+    MKNetworkOperation *op = [YMGlobal getOpFromEngine:engine];
+    op = [YMGlobal setOperationParams:@"Get.AllProviders" apiparam:@"\\\"shop_id\\\":\\\"\\\"" execOp:op];
+    [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
+        SBJsonParser *parser = [[SBJsonParser alloc]init];
+        NSLog(@"com%@",[completedOperation responseString]);
+        NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
+        if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
+        {
+            NSMutableArray *bodyArray = [parser objectWithString:[data objectForKey:@"body"]];
+            SuppliersListViewController *supplierListVC = [[SuppliersListViewController alloc]init];
+            supplierListVC.supplierListArray = bodyArray;
+            UINavigationController *supplierNavigation = [[UINavigationController alloc]initWithRootViewController:supplierListVC];
+            [self presentViewController:supplierNavigation animated:YES completion:nil];
+//            GoodsInventoryViewController *goodsInventoryVC = [[GoodsInventoryViewController alloc]init];
+//            goodsInventoryVC.goodsInventoryArray = bodyArray;
+//            UINavigationController *inventoryNavigation = [[UINavigationController alloc]initWithRootViewController:goodsInventoryVC];
+//            [self presentViewController:inventoryNavigation animated:YES completion:nil];
+        }
+    } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
+        NSLog(@"error%@",[completedOperation responseString]);
+    }];
+    [engine enqueueOperation:op];
 }
 
 //应收账款
@@ -124,10 +148,19 @@
 }
 //设置
 - (IBAction)site:(id)sender {
+    SettingViewController *settingVC = [[SettingViewController alloc]init];
+    UINavigationController *settingNavigation = [[UINavigationController alloc]initWithRootViewController:settingVC];
+    [self presentViewController:settingNavigation animated:YES completion:nil];
 }
 //退出
 - (IBAction)logout:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)relogin:(NSNotification *)note
+{
+    NSLog(@"222");
+    [self dismissViewControllerAnimated:NO completion:nil];
+}
 
 @end

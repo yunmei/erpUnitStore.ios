@@ -12,6 +12,7 @@
 #import "SBJson.h"
 #import "MKNetworkKit.h"
 #import "LibraryViewController.h"
+#import "SuppliersListViewController.h"
 @interface MenuViewController : UIViewController
 
 @end

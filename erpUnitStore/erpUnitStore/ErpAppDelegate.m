@@ -9,7 +9,6 @@
 #import "ErpAppDelegate.h"
 #import "Constants.h"
 #import "ErpViewController.h"
-
 @implementation ErpAppDelegate
 @synthesize appEngine;
 
@@ -17,12 +16,25 @@
 {
     [NSThread sleepForTimeInterval:1];
     //创建MKNetworkEngine
-    self.appEngine = [[MKNetworkEngine alloc]initWithHostName:API_HOSTNAME customHeaderFields:nil];
-    [self.appEngine useCache];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[ErpViewController alloc] initWithNibName:@"ErpViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSLog(@"defaults:%@",[defaults objectForKey:@"systemVersion"]);
+     NSLog(@"appkey:%@",[defaults objectForKey:@"appkey"]);
+     NSLog(@"secretkey:%@",[defaults objectForKey:@"secretkey"]);
+     NSLog(@"uri:%@",[defaults objectForKey:@"uri"]);
+    if([[defaults objectForKey:@"systemVersion"] isEqualToString:SYS_VERSION])
+    {
+        self.viewController = [[ErpViewController alloc] initWithNibName:@"ErpViewController" bundle:nil];
+        self.window.rootViewController = self.viewController;
+    }else{
+        [defaults setObject:SYS_VERSION forKey:@"systemVersion"];
+        [defaults synchronize];
+        self.viewController1 = [[SlideViewController alloc] initWithNibName:@"SlideViewController" bundle:nil];
+        self.window.rootViewController = self.viewController1;
+    }
+//    self.viewController = [[ErpViewController alloc] initWithNibName:@"ErpViewController" bundle:nil];
+//    self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     
 

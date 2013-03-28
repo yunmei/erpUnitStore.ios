@@ -518,7 +518,7 @@
 					<object class="IBUIButton" id="8278142">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{273, 207}, {30, 30}}</string>
+						<string key="NSFrame">{{270, 203}, {38, 38}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -532,6 +532,10 @@
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="733248728"/>
+						<object class="NSCustomResource" key="IBUINormalImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">gy.png</string>
+						</object>
 						<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="496278858">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">op_bj.png</string>
@@ -542,7 +546,7 @@
 					<object class="IBUIButton" id="688877949">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{273, 262}, {30, 30}}</string>
+						<string key="NSFrame">{{270, 262}, {38, 38}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -556,6 +560,10 @@
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="733248728"/>
+						<object class="NSCustomResource" key="IBUINormalImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">xinxi.png</string>
+						</object>
 						<reference key="IBUINormalBackgroundImage" ref="496278858"/>
 						<reference key="IBUIFontDescription" ref="396116097"/>
 						<reference key="IBUIFont" ref="62375935"/>
@@ -563,7 +571,7 @@
 					<object class="IBUIButton" id="470502289">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{273, 329}, {30, 30}}</string>
+						<string key="NSFrame">{{270, 323}, {38, 38}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -577,6 +585,10 @@
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="733248728"/>
+						<object class="NSCustomResource" key="IBUINormalImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">sz.png</string>
+						</object>
 						<reference key="IBUINormalBackgroundImage" ref="496278858"/>
 						<reference key="IBUIFontDescription" ref="396116097"/>
 						<reference key="IBUIFont" ref="62375935"/>
@@ -584,7 +596,7 @@
 					<object class="IBUIButton" id="562587297">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{273, 391}, {30, 30}}</string>
+						<string key="NSFrame">{{270, 388}, {38, 38}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -598,6 +610,10 @@
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="733248728"/>
+						<object class="NSCustomResource" key="IBUINormalImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">exit.png</string>
+						</object>
 						<reference key="IBUINormalBackgroundImage" ref="496278858"/>
 						<reference key="IBUIFontDescription" ref="396116097"/>
 						<reference key="IBUIFont" ref="62375935"/>
@@ -605,7 +621,7 @@
 					<object class="IBUILabel" id="147046691">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{273, 233}, {42, 21}}</string>
+						<string key="NSFrame">{{273, 239}, {42, 21}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -635,7 +651,7 @@
 					<object class="IBUILabel" id="563203862">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{272, 294}, {42, 21}}</string>
+						<string key="NSFrame">{{270, 299}, {42, 21}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -675,7 +691,7 @@
 					<object class="IBUILabel" id="1015744674">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{273, 422}, {42, 21}}</string>
+						<string key="NSFrame">{{273, 423}, {42, 21}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -889,19 +905,19 @@
 							<reference ref="617612215"/>
 							<reference ref="655739487"/>
 							<reference ref="984132414"/>
-							<reference ref="1015744674"/>
 							<reference ref="321316887"/>
-							<reference ref="562587297"/>
 							<reference ref="692472789"/>
-							<reference ref="470502289"/>
-							<reference ref="688877949"/>
-							<reference ref="563203862"/>
-							<reference ref="147046691"/>
-							<reference ref="8278142"/>
 							<reference ref="876475132"/>
 							<reference ref="1050184254"/>
 							<reference ref="492172961"/>
 							<reference ref="63660322"/>
+							<reference ref="562587297"/>
+							<reference ref="470502289"/>
+							<reference ref="688877949"/>
+							<reference ref="8278142"/>
+							<reference ref="147046691"/>
+							<reference ref="563203862"/>
+							<reference ref="1015744674"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -1134,6 +1150,25 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">MenuViewController</string>
 					<string key="superclassName">UIViewController</string>
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="payBill:">id</string>
+						<string key="site:">id</string>
+						<string key="staffManage:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="payBill:">
+							<string key="name">payBill:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="site:">
+							<string key="name">site:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="staffManage:">
+							<string key="name">staffManage:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/MenuViewController.h</string>
@@ -1148,10 +1183,14 @@
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="bold.png">{175, 139}</string>
 			<string key="cg.png">{80, 70}</string>
+			<string key="exit.png">{40, 40}</string>
+			<string key="gy.png">{40, 40}</string>
 			<string key="hy.png">{80, 70}</string>
 			<string key="kc.png">{80, 70}</string>
 			<string key="op_bj.png">{40, 40}</string>
+			<string key="sz.png">{40, 40}</string>
 			<string key="title.png">{200, 33}</string>
+			<string key="xinxi.png">{40, 40}</string>
 			<string key="xs.png">{80, 70}</string>
 			<string key="yg.png">{80, 70}</string>
 		</dictionary>

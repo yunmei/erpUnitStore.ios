@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "MKNetworkKit.h"
+#import "SBJson.h"
+#import "YMGlobal.h"
+#import "MBProgressHUD.h"
 @interface SuppliersListViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
-
+@property (strong, nonatomic)NSMutableArray *supplierListArray;
 @end
