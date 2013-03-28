@@ -1197,7 +1197,6 @@
 						<string key="about:">id</string>
 						<string key="cgManage:">id</string>
 						<string key="getBill:">id</string>
-						<string key="kcManage:">id</string>
 						<string key="logout:">id</string>
 						<string key="memberMange:">id</string>
 						<string key="message:">id</string>
@@ -1218,10 +1217,6 @@
 						</object>
 						<object class="IBActionInfo" key="getBill:">
 							<string key="name">getBill:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="kcManage:">
-							<string key="name">kcManage:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="logout:">

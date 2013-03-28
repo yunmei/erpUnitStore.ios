@@ -32,6 +32,9 @@
 		AAAF66FE17041DB60074FF90 /* GoodsSellListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAF66FC17041DB60074FF90 /* GoodsSellListViewController.m */; };
 		AAAF66FF17041DB60074FF90 /* GoodsSellListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAAF66FD17041DB60074FF90 /* GoodsSellListViewController.xib */; };
 		AAAF6702170420F10074FF90 /* GoodssellCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAF6701170420F10074FF90 /* GoodssellCell.m */; };
+		AAB2EDB91704F6B600FC2F0F /* slide3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAB2EDB61704F6B600FC2F0F /* slide3.jpg */; };
+		AAB2EDBA1704F6B600FC2F0F /* slide1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAB2EDB71704F6B600FC2F0F /* slide1.jpg */; };
+		AAB2EDBB1704F6B600FC2F0F /* slide2.png in Resources */ = {isa = PBXBuildFile; fileRef = AAB2EDB81704F6B600FC2F0F /* slide2.png */; };
 		AAB6562516FEF50B005C3C3A /* SellChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB6562316FEF50B005C3C3A /* SellChartViewController.m */; };
 		AAB6562616FEF50B005C3C3A /* SellChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB6562416FEF50B005C3C3A /* SellChartViewController.xib */; };
 		AAB6562816FEF900005C3C3A /* tj_bj.png in Resources */ = {isa = PBXBuildFile; fileRef = AAB6562716FEF900005C3C3A /* tj_bj.png */; };
@@ -87,12 +90,6 @@
 		AAC4E45C170452CF00B65627 /* sz.png in Resources */ = {isa = PBXBuildFile; fileRef = AAC4E45B170452CF00B65627 /* sz.png */; };
 		AAC4E4611704534400B65627 /* SlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC4E45F1704534400B65627 /* SlideViewController.m */; };
 		AAC4E4621704534400B65627 /* SlideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC4E4601704534400B65627 /* SlideViewController.xib */; };
-		AAC4E4691704543000B65627 /* slide1-568h.png in Resources */ = {isa = PBXBuildFile; fileRef = AAC4E4631704542F00B65627 /* slide1-568h.png */; };
-		AAC4E46A1704543000B65627 /* slide1.png in Resources */ = {isa = PBXBuildFile; fileRef = AAC4E4641704542F00B65627 /* slide1.png */; };
-		AAC4E46B1704543000B65627 /* slide2-568h.png in Resources */ = {isa = PBXBuildFile; fileRef = AAC4E4651704543000B65627 /* slide2-568h.png */; };
-		AAC4E46C1704543000B65627 /* slide2.png in Resources */ = {isa = PBXBuildFile; fileRef = AAC4E4661704543000B65627 /* slide2.png */; };
-		AAC4E46D1704543000B65627 /* slide3-568h.png in Resources */ = {isa = PBXBuildFile; fileRef = AAC4E4671704543000B65627 /* slide3-568h.png */; };
-		AAC4E46E1704543000B65627 /* slide3.png in Resources */ = {isa = PBXBuildFile; fileRef = AAC4E4681704543000B65627 /* slide3.png */; };
 		AAD7387E16FEBBE500047C38 /* bj.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD7387D16FEBBE500047C38 /* bj.png */; };
 		AAD7388016FEBBED00047C38 /* bold.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD7387F16FEBBED00047C38 /* bold.png */; };
 		AAD7388216FEBD1C00047C38 /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD7388116FEBD1C00047C38 /* title.png */; };
@@ -158,6 +155,9 @@
 		AAAF66FD17041DB60074FF90 /* GoodsSellListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoodsSellListViewController.xib; sourceTree = "<group>"; };
 		AAAF6700170420F10074FF90 /* GoodssellCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodssellCell.h; sourceTree = "<group>"; };
 		AAAF6701170420F10074FF90 /* GoodssellCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodssellCell.m; sourceTree = "<group>"; };
+		AAB2EDB61704F6B600FC2F0F /* slide3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = slide3.jpg; sourceTree = "<group>"; };
+		AAB2EDB71704F6B600FC2F0F /* slide1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = slide1.jpg; sourceTree = "<group>"; };
+		AAB2EDB81704F6B600FC2F0F /* slide2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slide2.png; sourceTree = "<group>"; };
 		AAB6562216FEF50B005C3C3A /* SellChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SellChartViewController.h; sourceTree = "<group>"; };
 		AAB6562316FEF50B005C3C3A /* SellChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SellChartViewController.m; sourceTree = "<group>"; };
 		AAB6562416FEF50B005C3C3A /* SellChartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SellChartViewController.xib; sourceTree = "<group>"; };
@@ -245,12 +245,6 @@
 		AAC4E45E1704534400B65627 /* SlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideViewController.h; sourceTree = "<group>"; };
 		AAC4E45F1704534400B65627 /* SlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideViewController.m; sourceTree = "<group>"; };
 		AAC4E4601704534400B65627 /* SlideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SlideViewController.xib; sourceTree = "<group>"; };
-		AAC4E4631704542F00B65627 /* slide1-568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slide1-568h.png"; sourceTree = "<group>"; };
-		AAC4E4641704542F00B65627 /* slide1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slide1.png; sourceTree = "<group>"; };
-		AAC4E4651704543000B65627 /* slide2-568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slide2-568h.png"; sourceTree = "<group>"; };
-		AAC4E4661704543000B65627 /* slide2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slide2.png; sourceTree = "<group>"; };
-		AAC4E4671704543000B65627 /* slide3-568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slide3-568h.png"; sourceTree = "<group>"; };
-		AAC4E4681704543000B65627 /* slide3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slide3.png; sourceTree = "<group>"; };
 		AAD7387D16FEBBE500047C38 /* bj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bj.png; sourceTree = "<group>"; };
 		AAD7387F16FEBBED00047C38 /* bold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bold.png; sourceTree = "<group>"; };
 		AAD7388116FEBD1C00047C38 /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = "<group>"; };
@@ -574,6 +568,9 @@
 		AAB889A916FBF74900ED946F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AAB2EDB61704F6B600FC2F0F /* slide3.jpg */,
+				AAB2EDB71704F6B600FC2F0F /* slide1.jpg */,
+				AAB2EDB81704F6B600FC2F0F /* slide2.png */,
 				AABF78B91704EA1C00289ECD /* yszk.png */,
 				AABF78B71704E9B100289ECD /* spxd.png */,
 				AABF78B51704E94D00289ECD /* gys.png */,
@@ -582,12 +579,6 @@
 				AABF78AF1704E8D800289ECD /* icon.png */,
 				AABF78A81704DCEB00289ECD /* ic_launcher.png */,
 				AABF78A61704DCB300289ECD /* aboutus.png */,
-				AAC4E4631704542F00B65627 /* slide1-568h.png */,
-				AAC4E4641704542F00B65627 /* slide1.png */,
-				AAC4E4651704543000B65627 /* slide2-568h.png */,
-				AAC4E4661704543000B65627 /* slide2.png */,
-				AAC4E4671704543000B65627 /* slide3-568h.png */,
-				AAC4E4681704543000B65627 /* slide3.png */,
 				AAC4E45B170452CF00B65627 /* sz.png */,
 				AAC4E459170452A600B65627 /* xinxi.png */,
 				AAC4E4571704526B00B65627 /* gy.png */,
@@ -874,12 +865,6 @@
 				AAC4E45A170452A600B65627 /* xinxi.png in Resources */,
 				AAC4E45C170452CF00B65627 /* sz.png in Resources */,
 				AAC4E4621704534400B65627 /* SlideViewController.xib in Resources */,
-				AAC4E4691704543000B65627 /* slide1-568h.png in Resources */,
-				AAC4E46A1704543000B65627 /* slide1.png in Resources */,
-				AAC4E46B1704543000B65627 /* slide2-568h.png in Resources */,
-				AAC4E46C1704543000B65627 /* slide2.png in Resources */,
-				AAC4E46D1704543000B65627 /* slide3-568h.png in Resources */,
-				AAC4E46E1704543000B65627 /* slide3.png in Resources */,
 				AA39EDD71704918800ED57BF /* RegistSNViewController.xib in Resources */,
 				AA3B3B7B1704A8D9003B6540 /* SettingViewController.xib in Resources */,
 				AA49F89A1704B0E300DB2EBA /* HelpViewController.xib in Resources */,
@@ -895,6 +880,9 @@
 				AABF78B61704E94E00289ECD /* gys.png in Resources */,
 				AABF78B81704E9B100289ECD /* spxd.png in Resources */,
 				AABF78BA1704EA1C00289ECD /* yszk.png in Resources */,
+				AAB2EDB91704F6B600FC2F0F /* slide3.jpg in Resources */,
+				AAB2EDBA1704F6B600FC2F0F /* slide1.jpg in Resources */,
+				AAB2EDBB1704F6B600FC2F0F /* slide2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

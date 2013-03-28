@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <QuartzCore/QuartzCore.h>
 @interface SlideViewController : UIViewController<UIScrollViewDelegate>
 @property (strong,nonatomic) UIScrollView *pageScroll;
 @property (strong,nonatomic) UIPageControl *pageControl;
