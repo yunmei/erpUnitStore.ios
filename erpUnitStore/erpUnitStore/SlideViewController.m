@@ -29,6 +29,7 @@
 {
     [super viewDidLoad];
     [self.view addSubview:self.pageScroll];
+    self.view.backgroundColor = [UIColor blackColor];
     [self addImageToScrollView];
     [self.view addSubview:self.pageControl];
 }
