@@ -157,7 +157,7 @@ return cell;
 {
     if(_inventoryTableView == nil)
     {
-        _inventoryTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 30, 320, 400)];
+        _inventoryTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 30, 320, [UIScreen mainScreen].bounds.size.height-94)];
     }
     _inventoryTableView.dataSource = self;
     _inventoryTableView.delegate = self;
