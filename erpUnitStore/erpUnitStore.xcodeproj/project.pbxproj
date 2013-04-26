@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		468F42E4172A185F008A0B60 /* PullToRefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 468F42E3172A185F008A0B60 /* PullToRefreshTableView.m */; };
+		468F42EA172A4650008A0B60 /* list_filter.png in Resources */ = {isa = PBXBuildFile; fileRef = 468F42E9172A4650008A0B60 /* list_filter.png */; };
+		468F42EC172A4656008A0B60 /* list_filter_focus.png in Resources */ = {isa = PBXBuildFile; fileRef = 468F42EB172A4656008A0B60 /* list_filter_focus.png */; };
 		AA27A24B1702D2740089463E /* GoodsInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA27A2491702D2740089463E /* GoodsInformationViewController.m */; };
 		AA27A24C1702D2740089463E /* GoodsInformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA27A24A1702D2740089463E /* GoodsInformationViewController.xib */; };
 		AA39EDD61704918800ED57BF /* RegistSNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA39EDD41704918800ED57BF /* RegistSNViewController.m */; };
@@ -117,6 +120,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		468F42E2172A185F008A0B60 /* PullToRefreshTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullToRefreshTableView.h; sourceTree = "<group>"; };
+		468F42E3172A185F008A0B60 /* PullToRefreshTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullToRefreshTableView.m; sourceTree = "<group>"; };
+		468F42E9172A4650008A0B60 /* list_filter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list_filter.png; sourceTree = "<group>"; };
+		468F42EB172A4656008A0B60 /* list_filter_focus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list_filter_focus.png; sourceTree = "<group>"; };
 		AA27A2481702D2740089463E /* GoodsInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsInformationViewController.h; sourceTree = "<group>"; };
 		AA27A2491702D2740089463E /* GoodsInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsInformationViewController.m; sourceTree = "<group>"; };
 		AA27A24A1702D2740089463E /* GoodsInformationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoodsInformationViewController.xib; sourceTree = "<group>"; };
@@ -476,6 +483,8 @@
 		AAB8896416FBF6F100ED946F /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				468F42E2172A185F008A0B60 /* PullToRefreshTableView.h */,
+				468F42E3172A185F008A0B60 /* PullToRefreshTableView.m */,
 				AA49F8A31704B42600DB2EBA /* YMUIButton.h */,
 				AA49F8A41704B42600DB2EBA /* YMUIButton.m */,
 				AAD7388816FEC42A00047C38 /* UserModel.h */,
@@ -568,6 +577,8 @@
 		AAB889A916FBF74900ED946F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				468F42EB172A4656008A0B60 /* list_filter_focus.png */,
+				468F42E9172A4650008A0B60 /* list_filter.png */,
 				AAB2EDB61704F6B600FC2F0F /* slide3.jpg */,
 				AAB2EDB71704F6B600FC2F0F /* slide1.jpg */,
 				AAB2EDB81704F6B600FC2F0F /* slide2.png */,
@@ -883,6 +894,8 @@
 				AAB2EDB91704F6B600FC2F0F /* slide3.jpg in Resources */,
 				AAB2EDBA1704F6B600FC2F0F /* slide1.jpg in Resources */,
 				AAB2EDBB1704F6B600FC2F0F /* slide2.png in Resources */,
+				468F42EA172A4650008A0B60 /* list_filter.png in Resources */,
+				468F42EC172A4656008A0B60 /* list_filter_focus.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -941,6 +954,7 @@
 				AA49F8A51704B42600DB2EBA /* YMUIButton.m in Sources */,
 				AA49F8A91704B5AF00DB2EBA /* SetPasswordViewController.m in Sources */,
 				AABF78AD1704DEE200289ECD /* AboutUsViewController.m in Sources */,
+				468F42E4172A185F008A0B60 /* PullToRefreshTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -992,8 +1006,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				ONLY_ACTIVE_ARCH = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = NO;
 				PROVISIONING_PROFILE = "592F4C41-6F4A-46A9-A2C2-C2E7074A9901";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "592F4C41-6F4A-46A9-A2C2-C2E7074A9901";
 				SDKROOT = iphoneos;
@@ -1019,8 +1033,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				ONLY_ACTIVE_ARCH = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "592F4C41-6F4A-46A9-A2C2-C2E7074A9901";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "592F4C41-6F4A-46A9-A2C2-C2E7074A9901";
@@ -1035,7 +1049,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "erpUnitStore/erpUnitStore-Prefix.pch";
 				INFOPLIST_FILE = "erpUnitStore/erpUnitStore-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -1055,7 +1069,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "erpUnitStore/erpUnitStore-Prefix.pch";
 				INFOPLIST_FILE = "erpUnitStore/erpUnitStore-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",

@@ -40,7 +40,7 @@
     [self.providerAddressLabel setNumberOfLines:0];
             NSLog(@"supplier%@",self.supplierDictionary);
     [self.providerNameLabel setText:[NSString stringWithFormat:@"%@",[self.supplierDictionary objectForKey:@"Provider_name"]]];
-        CGSize size = [[self.supplierDictionary objectForKey:@"Provider_address"] sizeWithFont:[UIFont systemFontOfSize:15.0] constrainedToSize:CGSizeMake(200.0, 1000.0f) lineBreakMode:UILineBreakModeWordWrap];
+        CGSize size = [[self.supplierDictionary objectForKey:@"Provider_address"] sizeWithFont:[UIFont systemFontOfSize:15.0] constrainedToSize:CGSizeMake(200.0, 1000.0f) lineBreakMode:NSLineBreakByWordWrapping];
     [self.providerAddressLabel setFrame:CGRectMake(92, 91, 200, size.height)];
      [self.providerAddressLabel setText:[NSString stringWithFormat:@"%@",[self.supplierDictionary objectForKey:@"Provider_address"]]];
      [self.linkerLabel setText:[NSString stringWithFormat:@"%@",[self.supplierDictionary objectForKey:@"Linkman"]]];

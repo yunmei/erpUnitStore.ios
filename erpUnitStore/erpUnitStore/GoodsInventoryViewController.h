@@ -11,8 +11,9 @@
 #import "MKNetworkKit.h"
 #import "YMGlobal.h"
 #import "SBJson.h"
-@interface GoodsInventoryViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+#import "PullToRefreshTableView.h"
+@interface GoodsInventoryViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
 @property (strong,nonatomic)NSMutableArray *goodsInventoryArray;
-@property (strong, nonatomic)UITableView *inventoryTableView;
+@property (strong, nonatomic)PullToRefreshTableView *inventoryTableView;
 @property (strong, nonatomic)NSString *monthString;
 @end

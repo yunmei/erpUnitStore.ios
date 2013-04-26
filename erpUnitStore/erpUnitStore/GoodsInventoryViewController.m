@@ -37,22 +37,23 @@
     [self.view addSubview:self.inventoryTableView];
     NSLog(@"goodsInventoryArray%@",self.goodsInventoryArray);
     //获得系统时间
-    [self.inventoryTableView setBackgroundColor:[UIColor blackColor]];
-    NSDate *  senddate=[NSDate date];
-    NSDateFormatter  *dateformatter=[[NSDateFormatter alloc] init];
-    [dateformatter setDateFormat:@"MM"];
-    self.monthString = [dateformatter stringFromDate:senddate];
-    [dateformatter setDateFormat:@"YYYY-MM-dd HH-mm-ss"];
-    NSString *  locationString=[dateformatter stringFromDate:senddate];
-    UIImageView *headerView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 320, 30)];
-    [headerView setBackgroundColor:[UIColor colorWithRed:30/255.0 green:30/255.0 blue:30/255.0 alpha:1.0]];
-    UILabel *timeLable = [[UILabel alloc]initWithFrame:CGRectMake(70, 5, 250, 15)];
-    [timeLable setText:[NSString stringWithFormat:@"截至日期:%@",locationString]];
-    [timeLable setFont:[UIFont systemFontOfSize:12.0]];
-    [timeLable setTextColor:[UIColor whiteColor]];
-    [timeLable setBackgroundColor:[UIColor clearColor]];
-    [headerView addSubview:timeLable];
-    [self.view addSubview:headerView];
+//    [self.inventoryTableView setBackgroundColor:[UIColor blackColor]];
+//    NSDate *  senddate=[NSDate date];
+//    NSDateFormatter  *dateformatter=[[NSDateFormatter alloc] init];
+//    [dateformatter setDateFormat:@"MM"];
+//    self.monthString = [dateformatter stringFromDate:senddate];
+//    [dateformatter setDateFormat:@"YYYY-MM-dd HH-mm-ss"];
+//    NSString *  locationString=[dateformatter stringFromDate:senddate];
+//    UIImageView *headerView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 320, 30)];
+//    [headerView setBackgroundColor:[UIColor colorWithRed:30/255.0 green:30/255.0 blue:30/255.0 alpha:1.0]];
+//    UILabel *timeLable = [[UILabel alloc]initWithFrame:CGRectMake(70, 5, 250, 15)];
+//    [timeLable setText:[NSString stringWithFormat:@"截至日期:%@",locationString]];
+//    [timeLable setFont:[UIFont systemFontOfSize:12.0]];
+//    [timeLable setTextColor:[UIColor whiteColor]];
+//    [timeLable setBackgroundColor:[UIColor clearColor]];
+//    [headerView addSubview:timeLable];
+//    [self.view addSubview:headerView];
+            
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -127,7 +128,7 @@
     }
     [cell.percentbarButton setTitle:[NSString stringWithFormat:@"%g%%",i*100] forState:UIControlStateNormal];
     cell.percentbarButton.titleLabel.font = [UIFont systemFontOfSize:12.0];
-    cell.percentbarButton.titleLabel.textAlignment = UITextAlignmentCenter;
+    cell.percentbarButton.titleLabel.textAlignment = NSTextAlignmentCenter;
     [cell.percentbarButton setFrame:CGRectMake(10, 27, 300*i, 15)];
     
 return cell;
@@ -136,6 +137,25 @@ return cell;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 {
     return [self.goodsInventoryArray count];
+}
+
+//当视图拖动的时候
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    [self.inventoryTableView tableViewDidDragging];
+}
+
+-(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    int state = 0;
+    int countPage = 0;
+    state = [self.inventoryTableView tableViewDidEndDragging];
+    if(state == k_RETURN_LOADMORE)
+    {
+        
+    }else if (state == k_RETURN_REFRESH){
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -153,11 +173,11 @@ return cell;
     return _goodsInventoryArray;
 }
 
--(UITableView *)inventoryTableView
+-(PullToRefreshTableView *)inventoryTableView
 {
     if(_inventoryTableView == nil)
     {
-        _inventoryTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 30, 320, [UIScreen mainScreen].bounds.size.height-94)];
+        _inventoryTableView = [[PullToRefreshTableView alloc]initWithFrame:CGRectMake(0, 40, 320, [UIScreen mainScreen].bounds.size.height-94)];
     }
     _inventoryTableView.dataSource = self;
     _inventoryTableView.delegate = self;
