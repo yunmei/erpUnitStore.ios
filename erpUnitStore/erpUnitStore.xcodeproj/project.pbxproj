@@ -10,6 +10,25 @@
 		468F42E4172A185F008A0B60 /* PullToRefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 468F42E3172A185F008A0B60 /* PullToRefreshTableView.m */; };
 		468F42EA172A4650008A0B60 /* list_filter.png in Resources */ = {isa = PBXBuildFile; fileRef = 468F42E9172A4650008A0B60 /* list_filter.png */; };
 		468F42EC172A4656008A0B60 /* list_filter_focus.png in Resources */ = {isa = PBXBuildFile; fileRef = 468F42EB172A4656008A0B60 /* list_filter_focus.png */; };
+		4692E613172B65C400A47953 /* loading.png in Resources */ = {isa = PBXBuildFile; fileRef = 4692E612172B65C400A47953 /* loading.png */; };
+		4692E615172B65CF00A47953 /* combo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4692E614172B65CF00A47953 /* combo.png */; };
+		4692E617172B660600A47953 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4692E616172B660600A47953 /* AudioToolbox.framework */; };
+		4692E619172B660D00A47953 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4692E618172B660D00A47953 /* AVFoundation.framework */; };
+		4692E61B172B662300A47953 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4692E61A172B662300A47953 /* OpenAL.framework */; };
+		4692E61D172B663000A47953 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4692E61C172B663000A47953 /* OpenGLES.framework */; };
+		4692E62B172B668800A47953 /* libSF_deviceprotocol2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4692E61E172B668800A47953 /* libSF_deviceprotocol2.a */; };
+		4692E62C172B668800A47953 /* libAV_NetSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4692E61F172B668800A47953 /* libAV_NetSDK.a */; };
+		4692E62D172B668800A47953 /* libSF_Render.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4692E620172B668800A47953 /* libSF_Render.a */; };
+		4692E62E172B668800A47953 /* libSF_PlaySDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4692E621172B668800A47953 /* libSF_PlaySDK.a */; };
+		4692E62F172B668800A47953 /* libDecJpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4692E622172B668800A47953 /* libDecJpeg.a */; };
+		4692E630172B668800A47953 /* libh264Dec_Iphone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4692E623172B668800A47953 /* libh264Dec_Iphone.a */; };
+		4692E631172B668800A47953 /* libmpeg4Dec_Iphone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4692E624172B668800A47953 /* libmpeg4Dec_Iphone.a */; };
+		4692E632172B668800A47953 /* libSF_TPLayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4692E625172B668800A47953 /* libSF_TPLayer.a */; };
+		4692E633172B668800A47953 /* libSF_StreamParser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4692E626172B668800A47953 /* libSF_StreamParser.a */; };
+		4692E634172B668800A47953 /* libSF_StreamPacket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4692E627172B668800A47953 /* libSF_StreamPacket.a */; };
+		4692E635172B668800A47953 /* libSF_Platform.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4692E628172B668800A47953 /* libSF_Platform.a */; };
+		4692E636172B668800A47953 /* libSF_Encoder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4692E629172B668800A47953 /* libSF_Encoder.a */; };
+		4692E637172B668800A47953 /* libSF_Decoder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4692E62A172B668800A47953 /* libSF_Decoder.a */; };
 		AA27A24B1702D2740089463E /* GoodsInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA27A2491702D2740089463E /* GoodsInformationViewController.m */; };
 		AA27A24C1702D2740089463E /* GoodsInformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA27A24A1702D2740089463E /* GoodsInformationViewController.xib */; };
 		AA39EDD61704918800ED57BF /* RegistSNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA39EDD41704918800ED57BF /* RegistSNViewController.m */; };
@@ -124,6 +143,25 @@
 		468F42E3172A185F008A0B60 /* PullToRefreshTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullToRefreshTableView.m; sourceTree = "<group>"; };
 		468F42E9172A4650008A0B60 /* list_filter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list_filter.png; sourceTree = "<group>"; };
 		468F42EB172A4656008A0B60 /* list_filter_focus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list_filter_focus.png; sourceTree = "<group>"; };
+		4692E612172B65C400A47953 /* loading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading.png; sourceTree = "<group>"; };
+		4692E614172B65CF00A47953 /* combo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = combo.png; sourceTree = "<group>"; };
+		4692E616172B660600A47953 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		4692E618172B660D00A47953 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4692E61A172B662300A47953 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		4692E61C172B663000A47953 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		4692E61E172B668800A47953 /* libSF_deviceprotocol2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSF_deviceprotocol2.a; sourceTree = "<group>"; };
+		4692E61F172B668800A47953 /* libAV_NetSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAV_NetSDK.a; sourceTree = "<group>"; };
+		4692E620172B668800A47953 /* libSF_Render.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSF_Render.a; sourceTree = "<group>"; };
+		4692E621172B668800A47953 /* libSF_PlaySDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSF_PlaySDK.a; sourceTree = "<group>"; };
+		4692E622172B668800A47953 /* libDecJpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libDecJpeg.a; sourceTree = "<group>"; };
+		4692E623172B668800A47953 /* libh264Dec_Iphone.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libh264Dec_Iphone.a; sourceTree = "<group>"; };
+		4692E624172B668800A47953 /* libmpeg4Dec_Iphone.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmpeg4Dec_Iphone.a; sourceTree = "<group>"; };
+		4692E625172B668800A47953 /* libSF_TPLayer.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSF_TPLayer.a; sourceTree = "<group>"; };
+		4692E626172B668800A47953 /* libSF_StreamParser.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSF_StreamParser.a; sourceTree = "<group>"; };
+		4692E627172B668800A47953 /* libSF_StreamPacket.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSF_StreamPacket.a; sourceTree = "<group>"; };
+		4692E628172B668800A47953 /* libSF_Platform.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSF_Platform.a; sourceTree = "<group>"; };
+		4692E629172B668800A47953 /* libSF_Encoder.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSF_Encoder.a; sourceTree = "<group>"; };
+		4692E62A172B668800A47953 /* libSF_Decoder.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSF_Decoder.a; sourceTree = "<group>"; };
 		AA27A2481702D2740089463E /* GoodsInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsInformationViewController.h; sourceTree = "<group>"; };
 		AA27A2491702D2740089463E /* GoodsInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsInformationViewController.m; sourceTree = "<group>"; };
 		AA27A24A1702D2740089463E /* GoodsInformationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoodsInformationViewController.xib; sourceTree = "<group>"; };
@@ -369,6 +407,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4692E61D172B663000A47953 /* OpenGLES.framework in Frameworks */,
+				4692E61B172B662300A47953 /* OpenAL.framework in Frameworks */,
+				4692E619172B660D00A47953 /* AVFoundation.framework in Frameworks */,
+				4692E617172B660600A47953 /* AudioToolbox.framework in Frameworks */,
 				AAB889BE16FBFF3C00ED946F /* libsqlite3.dylib in Frameworks */,
 				AAB889BC16FBFF1300ED946F /* Security.framework in Frameworks */,
 				AAB889BA16FBFF0700ED946F /* QuartzCore.framework in Frameworks */,
@@ -379,12 +421,32 @@
 				AAED059016FBEE41006843E8 /* UIKit.framework in Frameworks */,
 				AAED059216FBEE41006843E8 /* Foundation.framework in Frameworks */,
 				AAE0630C16FFFE91000C5E98 /* libCorePlot-CocoaTouch.a in Frameworks */,
+				4692E62B172B668800A47953 /* libSF_deviceprotocol2.a in Frameworks */,
+				4692E62C172B668800A47953 /* libAV_NetSDK.a in Frameworks */,
+				4692E62D172B668800A47953 /* libSF_Render.a in Frameworks */,
+				4692E62E172B668800A47953 /* libSF_PlaySDK.a in Frameworks */,
+				4692E62F172B668800A47953 /* libDecJpeg.a in Frameworks */,
+				4692E630172B668800A47953 /* libh264Dec_Iphone.a in Frameworks */,
+				4692E631172B668800A47953 /* libmpeg4Dec_Iphone.a in Frameworks */,
+				4692E632172B668800A47953 /* libSF_TPLayer.a in Frameworks */,
+				4692E633172B668800A47953 /* libSF_StreamParser.a in Frameworks */,
+				4692E634172B668800A47953 /* libSF_StreamPacket.a in Frameworks */,
+				4692E635172B668800A47953 /* libSF_Platform.a in Frameworks */,
+				4692E636172B668800A47953 /* libSF_Encoder.a in Frameworks */,
+				4692E637172B668800A47953 /* libSF_Decoder.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4692E611172B64E400A47953 /* vedioMonitor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = vedioMonitor;
+			sourceTree = "<group>";
+		};
 		AA39EDD21704916B00ED57BF /* SN */ = {
 			isa = PBXGroup;
 			children = (
@@ -578,6 +640,8 @@
 			isa = PBXGroup;
 			children = (
 				468F42EB172A4656008A0B60 /* list_filter_focus.png */,
+				4692E614172B65CF00A47953 /* combo.png */,
+				4692E612172B65C400A47953 /* loading.png */,
 				468F42E9172A4650008A0B60 /* list_filter.png */,
 				AAB2EDB61704F6B600FC2F0F /* slide3.jpg */,
 				AAB2EDB71704F6B600FC2F0F /* slide1.jpg */,
@@ -743,6 +807,23 @@
 			isa = PBXGroup;
 			children = (
 				AAE0630B16FFFE91000C5E98 /* libCorePlot-CocoaTouch.a */,
+				4692E61E172B668800A47953 /* libSF_deviceprotocol2.a */,
+				4692E61F172B668800A47953 /* libAV_NetSDK.a */,
+				4692E620172B668800A47953 /* libSF_Render.a */,
+				4692E621172B668800A47953 /* libSF_PlaySDK.a */,
+				4692E622172B668800A47953 /* libDecJpeg.a */,
+				4692E623172B668800A47953 /* libh264Dec_Iphone.a */,
+				4692E624172B668800A47953 /* libmpeg4Dec_Iphone.a */,
+				4692E625172B668800A47953 /* libSF_TPLayer.a */,
+				4692E626172B668800A47953 /* libSF_StreamParser.a */,
+				4692E627172B668800A47953 /* libSF_StreamPacket.a */,
+				4692E628172B668800A47953 /* libSF_Platform.a */,
+				4692E629172B668800A47953 /* libSF_Encoder.a */,
+				4692E62A172B668800A47953 /* libSF_Decoder.a */,
+				4692E61C172B663000A47953 /* OpenGLES.framework */,
+				4692E61A172B662300A47953 /* OpenAL.framework */,
+				4692E618172B660D00A47953 /* AVFoundation.framework */,
+				4692E616172B660600A47953 /* AudioToolbox.framework */,
 				AAB889B316FBFE9F00ED946F /* CFNetwork.framework */,
 				AAB889B516FBFED600ED946F /* CoreMedia.framework */,
 				AAB889B716FBFEF000ED946F /* SystemConfiguration.framework */,
@@ -764,6 +845,7 @@
 				AAED05A716FBEE41006843E8 /* ErpViewController.h */,
 				AAED05A816FBEE41006843E8 /* ErpViewController.m */,
 				AAED05AA16FBEE41006843E8 /* ErpViewController.xib */,
+				4692E611172B64E400A47953 /* vedioMonitor */,
 				AA3B3B761704A8B0003B6540 /* Setting */,
 				AA39EDD21704916B00ED57BF /* SN */,
 				AAC4E45D1704532E00B65627 /* slide */,
@@ -896,6 +978,8 @@
 				AAB2EDBB1704F6B600FC2F0F /* slide2.png in Resources */,
 				468F42EA172A4650008A0B60 /* list_filter.png in Resources */,
 				468F42EC172A4656008A0B60 /* list_filter_focus.png in Resources */,
+				4692E613172B65C400A47953 /* loading.png in Resources */,
+				4692E615172B65CF00A47953 /* combo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
