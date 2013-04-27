@@ -177,16 +177,23 @@
          op = [YMGlobal setOperationParams:@"Get.InventoryList" apiparam:apiparamString execOp:op];
         //op = [YMGlobal setOperationParams:@"Get.CategoryGoodsList" apiparam:apiparamString execOp:op];
         [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
-            NSLog(@"responseString%@",[completedOperation responseString]);
+           // NSLog(@"responseString%@",[completedOperation responseString]);
             SBJsonParser *parser = [[SBJsonParser alloc]init];
             NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
+            NSLog(@"data%@",[data objectForKey:@"body"]);
             [hud hide:YES];
             if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
             {
-                self.goodsInventoryArray = [parser objectWithString:[data objectForKey:@"body"]];
-                [self.inventoryTableView reloadData];
-                [self slideBack];
+                if([data objectForKey:@"body"] == [NSNull null])
+                {
+                    [self slideBack];
+                }else{
+                    self.goodsInventoryArray = [parser objectWithString:[data objectForKey:@"body"]];
+                    [self.inventoryTableView reloadData];
+                    [self slideBack];
+                }
             }
+           // NSLog(@"class%@",[[data objectForKey:@"body"] class]);
             
         } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
             [hud hide:YES];
