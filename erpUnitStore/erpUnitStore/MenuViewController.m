@@ -102,6 +102,7 @@
 
 //供应商管理
 - (IBAction)payBill:(id)sender {
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     MKNetworkEngine *engine = [YMGlobal getEngine];
     MKNetworkOperation *op = [YMGlobal getOpFromEngine:engine];
     op = [YMGlobal setOperationParams:@"Get.AllProviders" apiparam:@"\\\"shop_id\\\":\\\"\\\"" execOp:op];
@@ -109,6 +110,7 @@
         SBJsonParser *parser = [[SBJsonParser alloc]init];
         NSLog(@"com%@",[completedOperation responseString]);
         NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
+        [hud hide:YES];
         if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
         {
             NSMutableArray *bodyArray = [parser objectWithString:[data objectForKey:@"body"]];
@@ -122,6 +124,7 @@
 //            [self presentViewController:inventoryNavigation animated:YES completion:nil];
         }
     } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
+        [hud hide:YES];
         NSLog(@"error%@",[completedOperation responseString]);
     }];
     [engine enqueueOperation:op];
