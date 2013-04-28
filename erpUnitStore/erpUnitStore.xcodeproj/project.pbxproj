@@ -29,6 +29,10 @@
 		4692E635172B668800A47953 /* libSF_Platform.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4692E628172B668800A47953 /* libSF_Platform.a */; };
 		4692E636172B668800A47953 /* libSF_Encoder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4692E629172B668800A47953 /* libSF_Encoder.a */; };
 		4692E637172B668800A47953 /* libSF_Decoder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4692E62A172B668800A47953 /* libSF_Decoder.a */; };
+		4692E63E172B67A600A47953 /* VideoWnd.m in Sources */ = {isa = PBXBuildFile; fileRef = 4692E63A172B67A600A47953 /* VideoWnd.m */; };
+		4692E63F172B67A600A47953 /* PopupBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 4692E63B172B67A600A47953 /* PopupBox.m */; };
+		4692E647172B6A3400A47953 /* MonitorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4692E645172B6A3400A47953 /* MonitorViewController.m */; };
+		4692E648172B6A3400A47953 /* MonitorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4692E646172B6A3400A47953 /* MonitorViewController.xib */; };
 		AA27A24B1702D2740089463E /* GoodsInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA27A2491702D2740089463E /* GoodsInformationViewController.m */; };
 		AA27A24C1702D2740089463E /* GoodsInformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA27A24A1702D2740089463E /* GoodsInformationViewController.xib */; };
 		AA39EDD61704918800ED57BF /* RegistSNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA39EDD41704918800ED57BF /* RegistSNViewController.m */; };
@@ -162,6 +166,16 @@
 		4692E628172B668800A47953 /* libSF_Platform.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSF_Platform.a; sourceTree = "<group>"; };
 		4692E629172B668800A47953 /* libSF_Encoder.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSF_Encoder.a; sourceTree = "<group>"; };
 		4692E62A172B668800A47953 /* libSF_Decoder.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSF_Decoder.a; sourceTree = "<group>"; };
+		4692E639172B67A600A47953 /* VideoWnd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoWnd.h; sourceTree = "<group>"; };
+		4692E63A172B67A600A47953 /* VideoWnd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoWnd.m; sourceTree = "<group>"; };
+		4692E63B172B67A600A47953 /* PopupBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopupBox.m; sourceTree = "<group>"; };
+		4692E63C172B67A600A47953 /* PopupBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupBox.h; sourceTree = "<group>"; };
+		4692E63D172B67A600A47953 /* PubDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PubDefine.h; sourceTree = "<group>"; };
+		4692E642172B69BC00A47953 /* AVNetSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVNetSDK.h; sourceTree = "<group>"; };
+		4692E643172B69BC00A47953 /* AVConfigSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVConfigSDK.h; sourceTree = "<group>"; };
+		4692E644172B6A3400A47953 /* MonitorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonitorViewController.h; sourceTree = "<group>"; };
+		4692E645172B6A3400A47953 /* MonitorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonitorViewController.m; sourceTree = "<group>"; };
+		4692E646172B6A3400A47953 /* MonitorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonitorViewController.xib; sourceTree = "<group>"; };
 		AA27A2481702D2740089463E /* GoodsInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsInformationViewController.h; sourceTree = "<group>"; };
 		AA27A2491702D2740089463E /* GoodsInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsInformationViewController.m; sourceTree = "<group>"; };
 		AA27A24A1702D2740089463E /* GoodsInformationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoodsInformationViewController.xib; sourceTree = "<group>"; };
@@ -443,8 +457,26 @@
 		4692E611172B64E400A47953 /* vedioMonitor */ = {
 			isa = PBXGroup;
 			children = (
+				4692E638172B677F00A47953 /* shared */,
+				4692E644172B6A3400A47953 /* MonitorViewController.h */,
+				4692E645172B6A3400A47953 /* MonitorViewController.m */,
+				4692E646172B6A3400A47953 /* MonitorViewController.xib */,
 			);
 			name = vedioMonitor;
+			sourceTree = "<group>";
+		};
+		4692E638172B677F00A47953 /* shared */ = {
+			isa = PBXGroup;
+			children = (
+				4692E642172B69BC00A47953 /* AVNetSDK.h */,
+				4692E643172B69BC00A47953 /* AVConfigSDK.h */,
+				4692E639172B67A600A47953 /* VideoWnd.h */,
+				4692E63A172B67A600A47953 /* VideoWnd.m */,
+				4692E63B172B67A600A47953 /* PopupBox.m */,
+				4692E63C172B67A600A47953 /* PopupBox.h */,
+				4692E63D172B67A600A47953 /* PubDefine.h */,
+			);
+			name = shared;
 			sourceTree = "<group>";
 		};
 		AA39EDD21704916B00ED57BF /* SN */ = {
@@ -980,6 +1012,7 @@
 				468F42EC172A4656008A0B60 /* list_filter_focus.png in Resources */,
 				4692E613172B65C400A47953 /* loading.png in Resources */,
 				4692E615172B65CF00A47953 /* combo.png in Resources */,
+				4692E648172B6A3400A47953 /* MonitorViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1039,6 +1072,9 @@
 				AA49F8A91704B5AF00DB2EBA /* SetPasswordViewController.m in Sources */,
 				AABF78AD1704DEE200289ECD /* AboutUsViewController.m in Sources */,
 				468F42E4172A185F008A0B60 /* PullToRefreshTableView.m in Sources */,
+				4692E63E172B67A600A47953 /* VideoWnd.m in Sources */,
+				4692E63F172B67A600A47953 /* PopupBox.m in Sources */,
+				4692E647172B6A3400A47953 /* MonitorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1068,6 +1104,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -1090,8 +1127,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				ONLY_ACTIVE_ARCH = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "592F4C41-6F4A-46A9-A2C2-C2E7074A9901";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "592F4C41-6F4A-46A9-A2C2-C2E7074A9901";
 				SDKROOT = iphoneos;
@@ -1102,6 +1139,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -1117,8 +1155,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				ONLY_ACTIVE_ARCH = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "592F4C41-6F4A-46A9-A2C2-C2E7074A9901";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "592F4C41-6F4A-46A9-A2C2-C2E7074A9901";
@@ -1130,6 +1168,7 @@
 		AAED05B016FBEE41006843E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "erpUnitStore/erpUnitStore-Prefix.pch";
 				INFOPLIST_FILE = "erpUnitStore/erpUnitStore-Info.plist";
@@ -1138,10 +1177,8 @@
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
-				OTHER_LDFLAGS = (
-					"-all_load",
-					"-ObjC",
-				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1150,6 +1187,7 @@
 		AAED05B116FBEE41006843E8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "erpUnitStore/erpUnitStore-Prefix.pch";
 				INFOPLIST_FILE = "erpUnitStore/erpUnitStore-Info.plist";
@@ -1158,10 +1196,8 @@
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
-				OTHER_LDFLAGS = (
-					"-all_load",
-					"-ObjC",
-				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

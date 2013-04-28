@@ -90,6 +90,7 @@
         [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
             SBJsonParser *parser = [[SBJsonParser alloc]init];
             NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
+            NSLog(@"data%@",data);
             if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
             {
                 NSMutableDictionary *bodyData = [parser objectWithString:[data objectForKey:@"body"]];

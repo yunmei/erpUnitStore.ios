@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface SettingViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
-
+@property (strong ,nonatomic)UIView *backgroundView;
+@property (strong ,nonatomic)UITableView *shoplistTableView;
+@property (strong, nonatomic)NSMutableArray *shoplistArray;
 @end

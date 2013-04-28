@@ -10,6 +10,7 @@
 #import "GoodsInventoryViewController.h"
 #import "SettingViewController.h"
 #import "AboutUsViewController.h"
+#import "MonitorViewController.h"
 @interface MenuViewController ()
 
 @end
@@ -136,6 +137,8 @@
 
 //应付账款
 - (IBAction)suppliersManage:(id)sender {
+   MonitorViewController *monitorVC = [[MonitorViewController alloc]init];
+    [self presentViewController:monitorVC animated:YES completion:nil];
 }
 
 //会员管理

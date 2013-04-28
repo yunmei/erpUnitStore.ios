@@ -19,10 +19,6 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSLog(@"defaults:%@",[defaults objectForKey:@"systemVersion"]);
-     NSLog(@"appkey:%@",[defaults objectForKey:@"appkey"]);
-     NSLog(@"secretkey:%@",[defaults objectForKey:@"secretkey"]);
-     NSLog(@"uri:%@",[defaults objectForKey:@"uri"]);
     if([[defaults objectForKey:@"systemVersion"] isEqualToString:SYS_VERSION])
     {
         self.viewController = [[ErpViewController alloc] initWithNibName:@"ErpViewController" bundle:nil];
@@ -36,8 +32,13 @@
 //    self.viewController = [[ErpViewController alloc] initWithNibName:@"ErpViewController" bundle:nil];
 //    self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    if([AVNetSDK AV_Startup])
+    {
+        
+    }else{
+        MSG(@"失败",@"SDK初始化失败" ,@"确定");
+    }
     
-
 //return  yes;
     return YES;
 }
