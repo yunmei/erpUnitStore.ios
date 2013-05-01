@@ -27,16 +27,16 @@
  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "SBJsonWriter.h"
+#import "SBJson_Writer.h"
 #import "SBJsonStreamWriter.h"
 #import "SBJsonStreamWriterAccumulator.h"
 
 
-@interface SBJsonWriter ()
+@interface SBJson_Writer ()
 @property (copy) NSString *error;
 @end
 
-@implementation SBJsonWriter
+@implementation SBJson_Writer
 
 @synthesize sortKeys;
 @synthesize humanReadable;

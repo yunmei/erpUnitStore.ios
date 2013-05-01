@@ -9,6 +9,7 @@
 #import "SuppliersListViewController.h"
 #import "GoodssellCell.h"
 #import "SupplierInformationViewController.h"
+#import "SBJson.h"
 @interface SuppliersListViewController ()
 
 @end
@@ -102,7 +103,7 @@
     NSString *apiparam = [NSString stringWithFormat:@"\\\"provider_id\\\":\\\"%@\\\"",supplierId];
     op = [YMGlobal setOperationParams:@"Get.SingleProvider" apiparam:apiparam execOp:op];
     [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
-        SBJsonParser *parser = [[SBJsonParser alloc]init];
+        SBJson_Parser *parser = [[SBJson_Parser alloc]init];
         NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
         if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
         {

@@ -35,6 +35,7 @@ CPTTextAlignment;
 
 @end
 
+
 /**	@category NSString(CPTTextStyleExtensions)
  *	@brief NSString extensions for drawing styled text.
  **/
@@ -51,3 +52,4 @@ CPTTextAlignment;
 ///	@}
 
 @end
+

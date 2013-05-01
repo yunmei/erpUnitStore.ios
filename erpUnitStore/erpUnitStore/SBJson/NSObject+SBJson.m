@@ -26,15 +26,14 @@
  OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
 #import "NSObject+SBJson.h"
-#import "SBJsonWriter.h"
-#import "SBJsonParser.h"
+#import "SBJson_Writer.h"
+#import "SBJson_Parser.h"
 
 @implementation NSObject (NSObject_SBJsonWriting)
 
 - (NSString *)JSONRepresentation {
-    SBJsonWriter *writer = [[SBJsonWriter alloc] init];    
+    SBJson_Writer *writer = [[SBJson_Writer alloc] init];
     NSString *json = [writer stringWithObject:self];
     if (!json)
         NSLog(@"-JSONRepresentation failed. Error is: %@", writer.error);
@@ -48,7 +47,7 @@
 @implementation NSString (NSString_SBJsonParsing)
 
 - (id)JSONValue {
-    SBJsonParser *parser = [[SBJsonParser alloc] init];
+    SBJson_Parser *parser = [[SBJson_Parser alloc] init];
     id repr = [parser objectWithString:self];
     if (!repr)
         NSLog(@"-JSONValue failed. Error is: %@", parser.error);
@@ -62,7 +61,7 @@
 @implementation NSData (NSData_SBJsonParsing)
 
 - (id)JSONValue {
-    SBJsonParser *parser = [[SBJsonParser alloc] init];
+    SBJson_Parser *parser = [[SBJson_Parser alloc] init];
     id repr = [parser objectWithData:self];
     if (!repr)
         NSLog(@"-JSONValue failed. Error is: %@", parser.error);

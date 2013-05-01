@@ -27,12 +27,12 @@
  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "SBJsonParser.h"
+#import "SBJson_Parser.h"
 #import "SBJsonStreamParser.h"
 #import "SBJsonStreamParserAdapter.h"
 #import "SBJsonStreamParserAccumulator.h"
 
-@implementation SBJsonParser
+@implementation SBJson_Parser
 
 @synthesize maxDepth;
 @synthesize error;

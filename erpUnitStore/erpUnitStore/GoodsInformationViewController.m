@@ -61,7 +61,7 @@
     MKNetworkOperation *op = [YMGlobal getOpFromEngine:engine];
     op = [YMGlobal setOperationParams:@"Get.Inventory" apiparam:[NSString stringWithFormat:@"\\\"Goods_id\\\":\\\"%@\\\"",self.goodsId] execOp:op];
     [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
-        SBJsonParser *parser = [[SBJsonParser alloc]init];
+        SBJson_Parser *parser = [[SBJson_Parser alloc]init];
         NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
         if([[data objectForKey:@"errcode"] isEqualToString:@"0"])
         {

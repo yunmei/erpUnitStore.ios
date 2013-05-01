@@ -56,7 +56,7 @@
     op = [YMGlobal setOperationParams:@"Get.Library_Statistical" apiparam:@"\\\"wherestr\\\":\\\"\\\"" execOp:op];
     [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
         NSLog(@"completedOperation%@",[completedOperation responseString]);
-        SBJsonParser *parser = [[SBJsonParser alloc]init];
+        SBJson_Parser *parser = [[SBJson_Parser alloc]init];
         NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
         if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
         {
@@ -85,7 +85,7 @@
      // op = [YMGlobal setOperationParams:@"Get.CategoryGoodsList" apiparam:@"" execOp:op];
     [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
         NSLog(@"%@",[completedOperation responseString]);
-        SBJsonParser *parser = [[SBJsonParser alloc]init];
+        SBJson_Parser *parser = [[SBJson_Parser alloc]init];
         NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
        if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
        {
@@ -108,7 +108,7 @@
     MKNetworkOperation *op = [YMGlobal getOpFromEngine:engine];
     op = [YMGlobal setOperationParams:@"Get.AllProviders" apiparam:@"\\\"shop_id\\\":\\\"\\\"" execOp:op];
     [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
-        SBJsonParser *parser = [[SBJsonParser alloc]init];
+        SBJson_Parser *parser = [[SBJson_Parser alloc]init];
         NSLog(@"com%@",[completedOperation responseString]);
         NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
         [hud hide:YES];

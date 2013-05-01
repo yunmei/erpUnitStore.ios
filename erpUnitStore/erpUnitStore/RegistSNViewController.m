@@ -7,7 +7,7 @@
 //
 
 #import "RegistSNViewController.h"
-
+#import "SBJson.h"
 @interface RegistSNViewController ()
 
 @end
@@ -88,7 +88,7 @@
         MKNetworkOperation *op = [YMGlobal getOpFromEngineSn:engine];
         op = [YMGlobal setOperationSn:self.snTextField.text execOp:op];
         [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
-            SBJsonParser *parser = [[SBJsonParser alloc]init];
+            SBJson_Parser *parser = [[SBJson_Parser alloc]init];
             NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
             NSLog(@"data%@",data);
             if([[data objectForKey:@"errcode"]isEqualToString:@"0"])

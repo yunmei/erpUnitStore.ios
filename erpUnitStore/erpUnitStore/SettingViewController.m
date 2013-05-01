@@ -182,7 +182,7 @@
             op = [YMGlobal setOperationParams:@"Get.ShopList" apiparam:apiparam execOp:op];
             [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
                 NSLog(@"completed%@",[completedOperation responseString]);
-                SBJsonParser *parser = [[SBJsonParser alloc]init];
+                SBJson_Parser *parser = [[SBJson_Parser alloc]init];
                 NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
                 if(!([data objectForKey:@"body"] == [NSNull null]))
                 {

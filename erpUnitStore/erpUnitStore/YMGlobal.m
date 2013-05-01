@@ -48,12 +48,20 @@
 +(MKNetworkOperation *)setOperationParams:(NSString *)apiName apiparam:(NSString *)aipString execOp:(MKNetworkOperation *)op
 {
     //发布时候去掉注释
- //   NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//    if([defaults objectForKey:@"appkey"])
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSMutableString *baseString;
+    if([defaults objectForKey:@"appkey"])
+    {
+        NSLog(@"1%@2%@3%@",[defaults objectForKey:@"appkey"],[defaults objectForKey:@"appkey"],[defaults objectForKey:@"secretkey"]);
+       baseString = [NSMutableString stringWithFormat:@"{\"myparams\":{\"version\":\"2.0\",\"format\":\"json\",\"appkey\":\"%@\",\"secretkey\":\"%@\",\"apiname\":\"",[defaults objectForKey:@"appkey"],[defaults objectForKey:@"secretkey"]];
+    }else{
+        baseString = [[NSMutableString alloc]initWithString:@"{\"myparams\":{\"version\":\"2.0\",\"format\":\"json\",\"appkey\":\"9832C19A-1BB4-4E67-920A-04CD5E1B25B2\",\"secretkey\":\"d++ytcOds2TuuDhG7SWS7f40A5VcPYnH30B66ye8YTVY3gjNQTyJZArShDyVYmZqu8Y8yAQuHu4V1+K9YAnr9pz4VxawLayzJ7dyjCrV7Vm68nZ2U7IANO1wBJ50lAbuBHBz1LBhtRqkk706qmYuFFWEO9zcaLhRRX2xiTafDYs=\",\"apiname\":\""];
+    }
 //    {
-//        NSString *baseString = [NSString stringWithFormat:@"{\"myparams\":{\"version\":\"2.0\",\"format\":\"json\",\"appkey\":\"%@\",\"secretkey\":\"%@\",\"apiname\":\"",[defaults objectForKey:@"appkey"],[defaults objectForKey:@"secretkey"]];
+//        NSMutableString *baseString = [[NSMutableString alloc]initWithString:@"{\"myparams\":{\"version\":\"2.0\",\"format\":\"json\",\"appkey\":\"%@\",\"secretkey\":\"%@\",\"apiname\":\"",[defaults objectForKey:@"appkey"],[defaults objectForKey:@"secretkey"]];
+//       // NSString *baseString = [NSString stringWithFormat:@"{\"myparams\":{\"version\":\"2.0\",\"format\":\"json\",\"appkey\":\"%@\",\"secretkey\":\"%@\",\"apiname\":\"",[defaults objectForKey:@"appkey"],[defaults objectForKey:@"secretkey"]];
 //    }
-    NSMutableString *baseString = [[NSMutableString alloc]initWithString:@"{\"myparams\":{\"version\":\"2.0\",\"format\":\"json\",\"appkey\":\"9832C19A-1BB4-4E67-920A-04CD5E1B25B2\",\"secretkey\":\"d++ytcOds2TuuDhG7SWS7f40A5VcPYnH30B66ye8YTVY3gjNQTyJZArShDyVYmZqu8Y8yAQuHu4V1+K9YAnr9pz4VxawLayzJ7dyjCrV7Vm68nZ2U7IANO1wBJ50lAbuBHBz1LBhtRqkk706qmYuFFWEO9zcaLhRRX2xiTafDYs=\",\"apiname\":\""];
+//    NSMutableString *baseString = [[NSMutableString alloc]initWithString:@"{\"myparams\":{\"version\":\"2.0\",\"format\":\"json\",\"appkey\":\"9832C19A-1BB4-4E67-920A-04CD5E1B25B2\",\"secretkey\":\"d++ytcOds2TuuDhG7SWS7f40A5VcPYnH30B66ye8YTVY3gjNQTyJZArShDyVYmZqu8Y8yAQuHu4V1+K9YAnr9pz4VxawLayzJ7dyjCrV7Vm68nZ2U7IANO1wBJ50lAbuBHBz1LBhtRqkk706qmYuFFWEO9zcaLhRRX2xiTafDYs=\",\"apiname\":\""];
     [baseString appendString:apiName];
     [baseString appendString:@"\",\"apiparam\":\"{"];
     [baseString appendString:aipString];

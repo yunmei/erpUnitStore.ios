@@ -125,7 +125,7 @@
         NSString *apiparamString = [NSString stringWithFormat:@"\\\"Goods_id\\\":\\\"%@\\\",\\\"date_range\\\":\\\"%@\\\",\\\"ordertype\\\":\\\"Sell\\\"",goodsId,dateAppend];
         op = [YMGlobal setOperationParams:@"Get.SingleGoodsSalesGroup" apiparam:apiparamString execOp:op];
         [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
-            SBJsonParser *parser = [[SBJsonParser alloc]init];
+            SBJson_Parser *parser = [[SBJson_Parser alloc]init];
             NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
             if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
             {
@@ -152,7 +152,7 @@
         NSString *apiparamString = [NSString stringWithFormat:@"\\\"typeid\\\":\\\"%@\\\"",self.selectedCatId];
         op = [YMGlobal setOperationParams:@"Get.CategoryGoodsList" apiparam:apiparamString execOp:op];
         [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
-            SBJsonParser *parser = [[SBJsonParser alloc]init];
+            SBJson_Parser *parser = [[SBJson_Parser alloc]init];
             NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
             [hud hide:YES];
             if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
@@ -178,7 +178,7 @@
         //op = [YMGlobal setOperationParams:@"Get.CategoryGoodsList" apiparam:apiparamString execOp:op];
         [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
            // NSLog(@"responseString%@",[completedOperation responseString]);
-            SBJsonParser *parser = [[SBJsonParser alloc]init];
+            SBJson_Parser *parser = [[SBJson_Parser alloc]init];
             NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
             NSLog(@"data%@",[data objectForKey:@"body"]);
             [hud hide:YES];
@@ -420,7 +420,7 @@
            // op = [YMGlobal setOperationParams:@"Get.InventoryList" apiparam:@"\\\"wherestr\\\":\\\"\\\",\\\"pageindex\\\":1,\\\"pagesize\\\":100,\\\"sort\\\":1,\\\"typeid\\\":\\\"\\\"" execOp:op];
             op = [YMGlobal setOperationParams:@"Get.CategoryGoodsList" apiparam:@"" execOp:op];
             [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
-                SBJsonParser *parser = [[SBJsonParser alloc]init];
+                SBJson_Parser *parser = [[SBJson_Parser alloc]init];
                 NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
                 [hud hide:YES];
                 if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
@@ -444,7 +444,7 @@
         op = [YMGlobal setOperationParams:@"Get.InventoryList" apiparam:@"\\\"wherestr\\\":\\\"\\\",\\\"pageindex\\\":1,\\\"pagesize\\\":100,\\\"sort\\\":1,\\\"typeid\\\":\\\"\\\"" execOp:op];
         // op = [YMGlobal setOperationParams:@"Get.CategoryGoodsList" apiparam:@"" execOp:op];
         [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
-            SBJsonParser *parser = [[SBJsonParser alloc]init];
+            SBJson_Parser *parser = [[SBJson_Parser alloc]init];
             NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
             if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
             {
@@ -462,7 +462,7 @@
         op = [YMGlobal setOperationParams:@"Get.InventoryList" apiparam:@"\\\"wherestr\\\":\\\"\\\",\\\"pageindex\\\":1,\\\"pagesize\\\":100,\\\"sort\\\":1,\\\"typeid\\\":\\\"\\\"" execOp:op];
         // op = [YMGlobal setOperationParams:@"Get.CategoryGoodsList" apiparam:@"" execOp:op];
         [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
-            SBJsonParser *parser = [[SBJsonParser alloc]init];
+            SBJson_Parser *parser = [[SBJson_Parser alloc]init];
             NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
             if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
             {
@@ -480,7 +480,7 @@
         op = [YMGlobal setOperationParams:@"Get.InventoryList" apiparam:@"\\\"wherestr\\\":\\\"\\\",\\\"pageindex\\\":1,\\\"pagesize\\\":100,\\\"sort\\\":1,\\\"typeid\\\":\\\"\\\",\\\"warning\\\":\\\"1\\\"" execOp:op];
         // op = [YMGlobal setOperationParams:@"Get.CategoryGoodsList" apiparam:@"" execOp:op];
         [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
-            SBJsonParser *parser = [[SBJsonParser alloc]init];
+            SBJson_Parser *parser = [[SBJson_Parser alloc]init];
             NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
             if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
             {

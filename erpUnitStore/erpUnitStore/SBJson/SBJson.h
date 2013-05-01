@@ -75,8 +75,8 @@
 
  */
 
-#import "SBJsonParser.h"
-#import "SBJsonWriter.h"
+#import "SBJson_Parser.h"
+#import "SBJson_Writer.h"
 #import "SBJsonStreamParser.h"
 #import "SBJsonStreamParserAdapter.h"
 #import "SBJsonStreamWriter.h"

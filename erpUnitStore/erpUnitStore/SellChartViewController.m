@@ -8,6 +8,7 @@
 
 #import "SellChartViewController.h"
 #import "GoodsSellListViewController.h"
+
 @interface SellChartViewController ()
 
 @end
@@ -337,6 +338,7 @@
         int count =0;
         for(int i =0;i<26;i +=4)
         {
+           // CPTAxisLable *newlable1 = [CPTAxisLabel alloc]ini
             CPTAxisLabel *newLable = [[CPTAxisLabel alloc]initWithText:[NSString stringWithFormat:@"%i",i] textStyle:lableTextStyle];
             newLable.tickLocation = CPTDecimalFromInt(count*4);
             newLable.offset = x.labelOffset + x.majorTickLength;
@@ -631,7 +633,7 @@
     NSString *apiparamString = [NSString stringWithFormat:@"\\\"date_range\\\":\\\"2012-1-1|2013-3-28\\\",\\\"ordertype\\\":\\\"sell\\\""];
     op = [YMGlobal setOperationParams:@"Get.AllGoodsSaleList" apiparam:apiparamString execOp:op];
     [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
-        SBJsonParser *parser = [[SBJsonParser alloc]init];
+        SBJson_Parser *parser = [[SBJson_Parser alloc]init];
         NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
         if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
         {
@@ -662,7 +664,7 @@
     NSString *apiparamString = [NSString stringWithFormat:@"\\\"date_range\\\":\\\"%@\\\",\\\"ordertype\\\":\\\"sell\\\"",dateAppend];
     op = [YMGlobal setOperationParams:@"Get.AllGoodsSaleList" apiparam:apiparamString execOp:op];
     [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
-        SBJsonParser *parser = [[SBJsonParser alloc]init];
+        SBJson_Parser *parser = [[SBJson_Parser alloc]init];
         NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
         if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
         {
@@ -694,7 +696,7 @@
      NSString *apiparamString = [NSString stringWithFormat:@"\\\"date_range\\\":\\\"2012-1-1|2013-3-28\\\",\\\"ordertype\\\":\\\"sell\\\""];
     op = [YMGlobal setOperationParams:@"Get.AllGoodsSaleList" apiparam:apiparamString execOp:op];
     [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
-        SBJsonParser *parser = [[SBJsonParser alloc]init];
+        SBJson_Parser *parser = [[SBJson_Parser alloc]init];
         NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
         if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
         {
@@ -726,7 +728,7 @@
     NSString *apiparamString = [NSString stringWithFormat:@"\\\"date_range\\\":\\\"2012-1-1|2013-3-28\\\",\\\"ordertype\\\":\\\"sell\\\""];
     op = [YMGlobal setOperationParams:@"Get.AllGoodsSaleList" apiparam:apiparamString execOp:op];
     [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
-        SBJsonParser *parser = [[SBJsonParser alloc]init];
+        SBJson_Parser *parser = [[SBJson_Parser alloc]init];
         NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
         if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
         {
@@ -758,7 +760,7 @@
     NSString *apiparamString = [NSString stringWithFormat:@"\\\"date_range\\\":\\\"2012-1-1|2013-3-28\\\",\\\"ordertype\\\":\\\"sell\\\""];
     op = [YMGlobal setOperationParams:@"Get.AllGoodsSaleList" apiparam:apiparamString execOp:op];
     [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
-        SBJsonParser *parser = [[SBJsonParser alloc]init];
+        SBJson_Parser *parser = [[SBJson_Parser alloc]init];
         NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
         if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
         {
