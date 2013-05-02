@@ -81,7 +81,7 @@
 - (IBAction)kcManage:(id)sender {
     MKNetworkEngine *engine = [YMGlobal getEngine];
     MKNetworkOperation *op = [YMGlobal getOpFromEngine:engine];
-    op = [YMGlobal setOperationParams:@"Get.InventoryList" apiparam:@"\\\"wherestr\\\":\\\"\\\",\\\"pageindex\\\":1,\\\"pagesize\\\":100,\\\"sort\\\":1,\\\"typeid\\\":\\\"\\\"" execOp:op];
+    op = [YMGlobal setOperationParams:@"Get.InventoryList" apiparam:@"\\\"wherestr\\\":\\\"\\\",\\\"pageindex\\\":1,\\\"pagesize\\\":9,\\\"sort\\\":1,\\\"typeid\\\":\\\"\\\"" execOp:op];
      // op = [YMGlobal setOperationParams:@"Get.CategoryGoodsList" apiparam:@"" execOp:op];
     [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
         NSLog(@"%@",[completedOperation responseString]);

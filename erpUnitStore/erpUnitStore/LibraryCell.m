@@ -48,7 +48,7 @@
         _numberLable = [[UILabel alloc]initWithFrame:CGRectMake(10, 30, 80, 20)];
         [_numberLable setBackgroundColor:[UIColor clearColor]];
         [_numberLable setFont:[UIFont systemFontOfSize:13.0]];
-        [_numberLable setTextColor:[UIColor colorWithRed:255/255 green:227/255.0 blue:129/255.0 alpha:0.3]];
+        [_numberLable setTextColor:[UIColor colorWithRed:255/255 green:227/255.0 blue:129/255.0 alpha:1.0]];
     }
     return _numberLable;
 }

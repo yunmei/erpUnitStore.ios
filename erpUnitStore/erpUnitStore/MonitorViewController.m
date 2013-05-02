@@ -181,14 +181,6 @@
 
 
 
-- (IBAction)PTZControl:(id)sender {
-    [self PTZControlOper:YES];
-}
-
-- (IBAction)PTZControlDown:(id)sender {
-    [self PTZControlOper:NO];
-}
-
 - (IBAction)stop:(id)sender {
     if (m_hRealplay > 0)
 	{

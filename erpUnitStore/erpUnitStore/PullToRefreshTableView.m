@@ -26,7 +26,7 @@
         //  初始化状态提示文本
         stateLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, width, 20)];
         stateLabel.font = [UIFont systemFontOfSize:12.0f];
-        stateLabel.backgroundColor = [UIColor clearColor];
+        stateLabel.backgroundColor = [UIColor colorWithRed:100/255.0 green:100/255.0 blue:100/255.0 alpha:1.0];
         stateLabel.textAlignment = NSTextAlignmentCenter;
         stateLabel.text = @"";
         [self addSubview:stateLabel];

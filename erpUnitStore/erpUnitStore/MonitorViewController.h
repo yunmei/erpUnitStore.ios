@@ -36,9 +36,6 @@
 - (IBAction)backgroundTap:(id)sender;
 
 
-- (IBAction)PTZControl:(id)sender;
-- (IBAction)PTZControlDown:(id)sender;
-
 
 - (void) PTZControlOper:(BOOL)bStop;
 

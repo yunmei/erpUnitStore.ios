@@ -40,74 +40,8 @@
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithTitle:@"返回" style:UIBarButtonItemStyleBordered target:self action:@selector(backVC:)];
     self.navigationItem.leftBarButtonItem = backItem;
     
-    //绘制第一个
-    //日销售lable
-    UILabel *todayLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 18, 80, 20)];
-    [todayLabel setText:@"日销售量"];
-    [todayLabel setTextColor:[UIColor whiteColor]];
-    [todayLabel setBackgroundColor:[UIColor clearColor]];
-    [todayLabel setFont:[UIFont systemFontOfSize:17.0]];
-    [self.view addSubview:todayLabel];
-    UILabel *daySingleDataLable = [[UILabel alloc]initWithFrame:CGRectMake(170, 19, 150, 20)];
-    [daySingleDataLable setText:[NSString stringWithFormat:@"昨日 : %@  今日 : %@",@"50",@"20"]];
-    [daySingleDataLable setTextColor:[UIColor whiteColor]];
-    [daySingleDataLable setBackgroundColor:[UIColor clearColor]];
-    [daySingleDataLable setFont:[UIFont systemFontOfSize:14.0]];
-    [self.view addSubview:daySingleDataLable];
-    //周销售lable
-    UILabel *weekLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 180, 80, 20)];
-    [weekLabel setText:@"周销售量"];
-    [weekLabel setTextColor:[UIColor whiteColor]];
-    [weekLabel setBackgroundColor:[UIColor clearColor]];
-    [weekLabel setFont:[UIFont systemFontOfSize:17.0]];
-    [self.view addSubview:weekLabel];
-    UILabel *weekSingleDataLable = [[UILabel alloc]initWithFrame:CGRectMake(170, 183, 150, 20)];
-    [weekSingleDataLable setText:[NSString stringWithFormat:@"上周 : %@  本周 : %@",@"50",@"20"]];
-    [weekSingleDataLable setTextColor:[UIColor whiteColor]];
-    [weekSingleDataLable setBackgroundColor:[UIColor clearColor]];
-    [weekSingleDataLable setFont:[UIFont systemFontOfSize:14.0]];
-    [self.view addSubview:weekSingleDataLable];
-    //月销售lable
-    UILabel *monthLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 340, 80, 20)];
-    [monthLabel setText:@"月销售量"];
-    [monthLabel setTextColor:[UIColor whiteColor]];
-    [monthLabel setBackgroundColor:[UIColor clearColor]];
-    [monthLabel setFont:[UIFont systemFontOfSize:17.0]];
-    [self.view addSubview:monthLabel];
-    UILabel *monthSingleDataLable = [[UILabel alloc]initWithFrame:CGRectMake(170, 343, 150, 20)];
-    [monthSingleDataLable setText:[NSString stringWithFormat:@"上月 : %@  本月 : %@",@"50",@"20"]];
-    [monthSingleDataLable setTextColor:[UIColor whiteColor]];
-    [monthSingleDataLable setBackgroundColor:[UIColor clearColor]];
-    [monthSingleDataLable setFont:[UIFont systemFontOfSize:14.0]];
-    [self.view addSubview:monthSingleDataLable];
-    //季度销售量
-    UILabel *quarterLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 500, 100, 20)];
-    [quarterLabel setText:@"季度销售量"];
-    [quarterLabel setTextColor:[UIColor whiteColor]];
-    [quarterLabel setBackgroundColor:[UIColor clearColor]];
-    [quarterLabel setFont:[UIFont systemFontOfSize:17.0]];
-    [self.view addSubview:quarterLabel];
-    UILabel *quarterSingleDataLable = [[UILabel alloc]initWithFrame:CGRectMake(170, 502, 150, 20)];
-    [quarterSingleDataLable setText:[NSString stringWithFormat:@"上季度 : %@  本季度 : %@",@"50",@"20"]];
-    [quarterSingleDataLable setTextColor:[UIColor whiteColor]];
-    [quarterSingleDataLable setBackgroundColor:[UIColor clearColor]];
-    [quarterSingleDataLable setFont:[UIFont systemFontOfSize:14.0]];
-    [self.view addSubview:quarterSingleDataLable];
-    //年销量
-    UILabel *yearLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 680, 80, 20)];
-    [yearLabel setText:@"年销售量"];
-    [yearLabel setTextColor:[UIColor whiteColor]];
-    [yearLabel setBackgroundColor:[UIColor clearColor]];
-    [yearLabel setFont:[UIFont systemFontOfSize:17.0]];
-    [self.view addSubview:yearLabel];
-    UILabel *yearSingleDataLable = [[UILabel alloc]initWithFrame:CGRectMake(170, 682, 150, 20)];
-    [yearSingleDataLable setText:[NSString stringWithFormat:@"去年 : %@  今年 : %@",@"50",@"20"]];
-    [yearSingleDataLable setTextColor:[UIColor whiteColor]];
-    [yearSingleDataLable setBackgroundColor:[UIColor clearColor]];
-    [yearSingleDataLable setFont:[UIFont systemFontOfSize:14.0]];
-    [self.view addSubview:yearSingleDataLable];
-    UIImageView *dayImgView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 40, 300 , 120)];
-   [dayImgView setImage:[UIImage imageNamed:@"tj_bj.png"]];
+    UIImageView *dayImgView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 20, 300 , 145)];
+   [dayImgView setImage:[UIImage imageNamed:@"cell_bg@2x.png"]];
     //图形要放在一个 CPTGraphHostingView 中，CPTGraphHostingView 继承自 UIView
     CPTGraphHostingView *dayHostView = [[CPTGraphHostingView alloc] initWithFrame:CGRectMake(0, 0, 300 , 120)];
     //把 CPTGraphHostingView 加到你自己的 View 中
@@ -122,16 +56,29 @@
     CPTXYGraph *dayGrahp = [[CPTXYGraph alloc]initWithFrame:dayHostView.bounds];
     dayHostView.hostedGraph = dayGrahp;
     [self setGraphParam:dayGrahp hostView:dayHostView identifier:DAYDATA];
-    
+    //绘制第一个
+    //日销售lable
+    UILabel *todayLabel = [[UILabel alloc]initWithFrame:CGRectMake(15, 138, 80, 20)];
+    [todayLabel setText:@"日销售量"];
+    [todayLabel setTextColor:[UIColor blackColor]];
+    [todayLabel setBackgroundColor:[UIColor clearColor]];
+    [todayLabel setFont:[UIFont systemFontOfSize:14.0]];
+    [self.view addSubview:todayLabel];
+    UILabel *daySingleDataLable = [[UILabel alloc]initWithFrame:CGRectMake(180, 136, 150, 20)];
+    [daySingleDataLable setText:[NSString stringWithFormat:@"昨日 : %@  今日 : %@",@"50",@"20"]];
+    [daySingleDataLable setTextColor:[UIColor blackColor]];
+    [daySingleDataLable setBackgroundColor:[UIColor clearColor]];
+    [daySingleDataLable setFont:[UIFont systemFontOfSize:12.0]];
+    [self.view addSubview:daySingleDataLable];
     //绘制第二个
-    UIImageView *weekImgView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 200, 300 , 120)];
-    [weekImgView setImage:[UIImage imageNamed:@"tj_bj.png"]];
+    UIImageView *weekImgView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 185, 300 , 145)];
+    [weekImgView setImage:[UIImage imageNamed:@"cell_bg@2x.png"]];
     //图形要放在一个 CPTGraphHostingView 中，CPTGraphHostingView 继承自 UIView
     CPTGraphHostingView *weekHostView = [[CPTGraphHostingView alloc] initWithFrame:CGRectMake(0, 0, 300 , 120)];
     //把 CPTGraphHostingView 加到你自己的 View 中
     [weekImgView addSubview:weekHostView];
     weekHostView.backgroundColor = [UIColor clearColor];
-    UIButton *btn2 = [[UIButton alloc]initWithFrame:CGRectMake(10, 200, 300 , 120)];
+    UIButton *btn2 = [[UIButton alloc]initWithFrame:CGRectMake(10, 185, 300 , 120)];
     btn2.backgroundColor = [UIColor clearColor];
     [btn2 addTarget:self action:@selector(weekPressed:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:weekImgView];
@@ -140,16 +87,28 @@
     CPTXYGraph *weekGrahp = [[CPTXYGraph alloc]initWithFrame:weekHostView.bounds];
     weekHostView.hostedGraph = weekGrahp;
     [self setGraphParam:weekGrahp hostView:weekHostView identifier:WEEKDATA];
-    
+    //周销售lable
+    UILabel *weekLabel = [[UILabel alloc]initWithFrame:CGRectMake(15, 305, 80, 20)];
+    [weekLabel setText:@"周销售量"];
+    [weekLabel setTextColor:[UIColor blackColor]];
+    [weekLabel setBackgroundColor:[UIColor clearColor]];
+    [weekLabel setFont:[UIFont systemFontOfSize:14.0]];
+    [self.view addSubview:weekLabel];
+    UILabel *weekSingleDataLable = [[UILabel alloc]initWithFrame:CGRectMake(180, 303, 150, 20)];
+    [weekSingleDataLable setText:[NSString stringWithFormat:@"上周 : %@  本周 : %@",@"50",@"20"]];
+    [weekSingleDataLable setTextColor:[UIColor blackColor]];
+    [weekSingleDataLable setBackgroundColor:[UIColor clearColor]];
+    [weekSingleDataLable setFont:[UIFont systemFontOfSize:12.0]];
+    [self.view addSubview:weekSingleDataLable];
     //绘制第三个
-    UIImageView *monthImgView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 360, 300 , 120)];
-    [monthImgView setImage:[UIImage imageNamed:@"tj_bj.png"]];
+    UIImageView *monthImgView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 350, 300 , 145)];
+    [monthImgView setImage:[UIImage imageNamed:@"cell_bg@2x.png"]];
     //图形要放在一个 CPTGraphHostingView 中，CPTGraphHostingView 继承自 UIView
     CPTGraphHostingView *monthHostView = [[CPTGraphHostingView alloc] initWithFrame:CGRectMake(0, 0, 300 , 120)];
     //把 CPTGraphHostingView 加到你自己的 View 中
     [monthImgView addSubview:monthHostView];
     monthHostView.backgroundColor = [UIColor clearColor];
-    UIButton *btn3 = [[UIButton alloc]initWithFrame:CGRectMake(10, 360, 300 , 120)];
+    UIButton *btn3 = [[UIButton alloc]initWithFrame:CGRectMake(10, 350, 300 , 120)];
     btn3.backgroundColor = [UIColor clearColor];
     [btn3 addTarget:self action:@selector(monthPressed:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:monthImgView];
@@ -158,16 +117,28 @@
     CPTXYGraph *monthGrahp = [[CPTXYGraph alloc]initWithFrame:monthImgView.bounds];
     monthHostView.hostedGraph = monthGrahp;
     [self setGraphParam:monthGrahp hostView:monthHostView identifier:MONTHDATA];
-    
+    //月销售lable
+    UILabel *monthLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 470, 80, 20)];
+    [monthLabel setText:@"月销售量"];
+    [monthLabel setTextColor:[UIColor blackColor]];
+    [monthLabel setBackgroundColor:[UIColor clearColor]];
+    [monthLabel setFont:[UIFont systemFontOfSize:14.0]];
+    [self.view addSubview:monthLabel];
+    UILabel *monthSingleDataLable = [[UILabel alloc]initWithFrame:CGRectMake(180, 468, 150, 20)];
+    [monthSingleDataLable setText:[NSString stringWithFormat:@"上月 : %@  本月 : %@",@"50",@"20"]];
+    [monthSingleDataLable setTextColor:[UIColor blackColor]];
+    [monthSingleDataLable setBackgroundColor:[UIColor clearColor]];
+    [monthSingleDataLable setFont:[UIFont systemFontOfSize:12.0]];
+    [self.view addSubview:monthSingleDataLable];
     //绘制第四个
-    UIImageView *quarterImgView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 520, 300 , 120)];
-    [quarterImgView setImage:[UIImage imageNamed:@"tj_bj.png"]];
+    UIImageView *quarterImgView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 515, 300 , 145)];
+    [quarterImgView setImage:[UIImage imageNamed:@"cell_bg@2x.png"]];
     //图形要放在一个 CPTGraphHostingView 中，CPTGraphHostingView 继承自 UIView
     CPTGraphHostingView *quarterHostView = [[CPTGraphHostingView alloc] initWithFrame:CGRectMake(0, 0, 300 , 120)];
     //把 CPTGraphHostingView 加到你自己的 View 中
     [quarterImgView addSubview:quarterHostView];
     quarterHostView.backgroundColor = [UIColor clearColor];
-    UIButton *btn4 = [[UIButton alloc]initWithFrame:CGRectMake(10, 520, 300 , 120)];
+    UIButton *btn4 = [[UIButton alloc]initWithFrame:CGRectMake(10, 515, 300 , 120)];
     btn4.backgroundColor = [UIColor clearColor];
     [btn4 addTarget:self action:@selector(quarterPressed:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:quarterImgView];
@@ -176,16 +147,29 @@
     CPTXYGraph *quarterGrahp = [[CPTXYGraph alloc]initWithFrame:weekHostView.bounds];
     quarterHostView.hostedGraph = quarterGrahp;
     [self setGraphParam:quarterGrahp hostView:quarterHostView identifier:QUARTERDATA];
+    //季度销售量
+    UILabel *quarterLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 633, 100, 20)];
+    [quarterLabel setText:@"季度销售量"];
+    [quarterLabel setTextColor:[UIColor blackColor]];
+    [quarterLabel setBackgroundColor:[UIColor clearColor]];
+    [quarterLabel setFont:[UIFont systemFontOfSize:14.0]];
+    [self.view addSubview:quarterLabel];
+    UILabel *quarterSingleDataLable = [[UILabel alloc]initWithFrame:CGRectMake(160, 630, 150, 20)];
+    [quarterSingleDataLable setText:[NSString stringWithFormat:@"上季度 : %@  本季度 : %@",@"50",@"20"]];
+    [quarterSingleDataLable setTextColor:[UIColor blackColor]];
+    [quarterSingleDataLable setBackgroundColor:[UIColor clearColor]];
+    [quarterSingleDataLable setFont:[UIFont systemFontOfSize:12.0]];
+    [self.view addSubview:quarterSingleDataLable];
     
     //绘制第五个
-    UIImageView *yearImgView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 700, 300 , 120)];
-    [yearImgView setImage:[UIImage imageNamed:@"tj_bj.png"]];
+    UIImageView *yearImgView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 680, 300 , 145)];
+    [yearImgView setImage:[UIImage imageNamed:@"cell_bg@2x.png"]];
     //图形要放在一个 CPTGraphHostingView 中，CPTGraphHostingView 继承自 UIView
     CPTGraphHostingView *yearHostView = [[CPTGraphHostingView alloc] initWithFrame:CGRectMake(0, 0, 300 , 120)];
     //把 CPTGraphHostingView 加到你自己的 View 中
     [yearImgView addSubview:yearHostView];
     yearHostView.backgroundColor = [UIColor clearColor];
-    UIButton *btn5 = [[UIButton alloc]initWithFrame:CGRectMake(10, 700, 300 , 120)];
+    UIButton *btn5 = [[UIButton alloc]initWithFrame:CGRectMake(10, 680, 300 , 120)];
     btn5.backgroundColor = [UIColor clearColor];
     [btn5 addTarget:self action:@selector(yearPressed:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:yearImgView];
@@ -194,6 +178,19 @@
     CPTXYGraph *yearGrahp = [[CPTXYGraph alloc]initWithFrame:weekHostView.bounds];
     yearHostView.hostedGraph = yearGrahp;
     [self setGraphParam:yearGrahp hostView:yearHostView identifier:YEARDATA];
+    //年销量
+    UILabel *yearLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 802, 80, 20)];
+    [yearLabel setText:@"年销售量"];
+    [yearLabel setTextColor:[UIColor blackColor]];
+    [yearLabel setBackgroundColor:[UIColor clearColor]];
+    [yearLabel setFont:[UIFont systemFontOfSize:14.0]];
+    [self.view addSubview:yearLabel];
+    UILabel *yearSingleDataLable = [[UILabel alloc]initWithFrame:CGRectMake(180, 796, 150, 20)];
+    [yearSingleDataLable setText:[NSString stringWithFormat:@"去年 : %@  今年 : %@",@"50",@"20"]];
+    [yearSingleDataLable setTextColor:[UIColor blackColor]];
+    [yearSingleDataLable setBackgroundColor:[UIColor clearColor]];
+    [yearSingleDataLable setFont:[UIFont systemFontOfSize:12.0]];
+    [self.view addSubview:yearSingleDataLable];
 }
 
 - (void)didReceiveMemoryWarning
@@ -649,19 +646,20 @@
 }
 - (void)weekPressed:(id)sender
 {
-    //格式化时间
+//    //格式化时间
     NSTimeInterval secondsPerDay = 26*60*60;
     NSDate *onDayBefore = [[NSDate alloc]initWithTimeIntervalSinceNow:-secondsPerDay];
-    NSDate *sevenDayBefore = [[NSDate alloc]initWithTimeIntervalSinceNow:-7*secondsPerDay];
+    NSDate *twoDayBefore = [[NSDate alloc]initWithTimeIntervalSinceNow:-2*secondsPerDay];
     NSDateFormatter  *dateformatter=[[NSDateFormatter alloc] init];
     [dateformatter setDateFormat:@"YYYY-MM-dd"];
-    NSString *  sevenDayBeforeString = [dateformatter stringFromDate:sevenDayBefore];
+    NSString *  twoDayBeforeString = [dateformatter stringFromDate:twoDayBefore];
     NSString *  oneDayBeforeString = [dateformatter stringFromDate:onDayBefore];
-    NSString *dateAppend = [NSString stringWithFormat:@"%@|%@",sevenDayBeforeString,oneDayBeforeString];
+    NSString *dateAppend = [NSString stringWithFormat:@"%@|%@",twoDayBeforeString,oneDayBeforeString];
     NSLog(@"dateAppend%@",dateAppend);
     MKNetworkEngine *engine = [YMGlobal getEngine];
     MKNetworkOperation *op = [YMGlobal getOpFromEngine:engine];
-    NSString *apiparamString = [NSString stringWithFormat:@"\\\"date_range\\\":\\\"%@\\\",\\\"ordertype\\\":\\\"sell\\\"",dateAppend];
+    // NSString *apiparamString = [NSString stringWithFormat:@"\\\"date_range\\\":\\\"%@\\\",\\\"ordertype\\\":\\\"sell\\\"",dateAppend];
+    NSString *apiparamString = [NSString stringWithFormat:@"\\\"date_range\\\":\\\"2012-1-1|2013-3-28\\\",\\\"ordertype\\\":\\\"sell\\\""];
     op = [YMGlobal setOperationParams:@"Get.AllGoodsSaleList" apiparam:apiparamString execOp:op];
     [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
         SBJson_Parser *parser = [[SBJson_Parser alloc]init];
@@ -677,23 +675,24 @@
         NSLog(@"error%@",[completedOperation responseString]);
     }];
     [engine enqueueOperation:op];
+
 }
 - (void)monthPressed:(id)sender
 {
     //格式化时间
     NSTimeInterval secondsPerDay = 26*60*60;
     NSDate *onDayBefore = [[NSDate alloc]initWithTimeIntervalSinceNow:-secondsPerDay];
-    NSDate *sevenDayBefore = [[NSDate alloc]initWithTimeIntervalSinceNow:-7*secondsPerDay];
+    NSDate *twoDayBefore = [[NSDate alloc]initWithTimeIntervalSinceNow:-2*secondsPerDay];
     NSDateFormatter  *dateformatter=[[NSDateFormatter alloc] init];
     [dateformatter setDateFormat:@"YYYY-MM-dd"];
-    NSString *  sevenDayBeforeString = [dateformatter stringFromDate:sevenDayBefore];
+    NSString *  twoDayBeforeString = [dateformatter stringFromDate:twoDayBefore];
     NSString *  oneDayBeforeString = [dateformatter stringFromDate:onDayBefore];
-    NSString *dateAppend = [NSString stringWithFormat:@"%@|%@",sevenDayBeforeString,oneDayBeforeString];
+    NSString *dateAppend = [NSString stringWithFormat:@"%@|%@",twoDayBeforeString,oneDayBeforeString];
     NSLog(@"dateAppend%@",dateAppend);
     MKNetworkEngine *engine = [YMGlobal getEngine];
     MKNetworkOperation *op = [YMGlobal getOpFromEngine:engine];
-   // NSString *apiparamString = [NSString stringWithFormat:@"\\\"date_range\\\":\\\"%@\\\",\\\"ordertype\\\":\\\"sell\\\"",dateAppend];
-     NSString *apiparamString = [NSString stringWithFormat:@"\\\"date_range\\\":\\\"2012-1-1|2013-3-28\\\",\\\"ordertype\\\":\\\"sell\\\""];
+    // NSString *apiparamString = [NSString stringWithFormat:@"\\\"date_range\\\":\\\"%@\\\",\\\"ordertype\\\":\\\"sell\\\"",dateAppend];
+    NSString *apiparamString = [NSString stringWithFormat:@"\\\"date_range\\\":\\\"2012-1-1|2013-3-28\\\",\\\"ordertype\\\":\\\"sell\\\""];
     op = [YMGlobal setOperationParams:@"Get.AllGoodsSaleList" apiparam:apiparamString execOp:op];
     [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
         SBJson_Parser *parser = [[SBJson_Parser alloc]init];
@@ -709,22 +708,23 @@
         NSLog(@"error%@",[completedOperation responseString]);
     }];
     [engine enqueueOperation:op];
+
 }
 - (void)quarterPressed:(id)sender
 {
     //格式化时间
     NSTimeInterval secondsPerDay = 26*60*60;
     NSDate *onDayBefore = [[NSDate alloc]initWithTimeIntervalSinceNow:-secondsPerDay];
-    NSDate *sevenDayBefore = [[NSDate alloc]initWithTimeIntervalSinceNow:-7*secondsPerDay];
+    NSDate *twoDayBefore = [[NSDate alloc]initWithTimeIntervalSinceNow:-2*secondsPerDay];
     NSDateFormatter  *dateformatter=[[NSDateFormatter alloc] init];
     [dateformatter setDateFormat:@"YYYY-MM-dd"];
-    NSString *  sevenDayBeforeString = [dateformatter stringFromDate:sevenDayBefore];
+    NSString *  twoDayBeforeString = [dateformatter stringFromDate:twoDayBefore];
     NSString *  oneDayBeforeString = [dateformatter stringFromDate:onDayBefore];
-    NSString *dateAppend = [NSString stringWithFormat:@"%@|%@",sevenDayBeforeString,oneDayBeforeString];
+    NSString *dateAppend = [NSString stringWithFormat:@"%@|%@",twoDayBeforeString,oneDayBeforeString];
     NSLog(@"dateAppend%@",dateAppend);
     MKNetworkEngine *engine = [YMGlobal getEngine];
     MKNetworkOperation *op = [YMGlobal getOpFromEngine:engine];
-    //NSString *apiparamString = [NSString stringWithFormat:@"\\\"date_range\\\":\\\"%@\\\",\\\"ordertype\\\":\\\"sell\\\"",dateAppend];
+    // NSString *apiparamString = [NSString stringWithFormat:@"\\\"date_range\\\":\\\"%@\\\",\\\"ordertype\\\":\\\"sell\\\"",dateAppend];
     NSString *apiparamString = [NSString stringWithFormat:@"\\\"date_range\\\":\\\"2012-1-1|2013-3-28\\\",\\\"ordertype\\\":\\\"sell\\\""];
     op = [YMGlobal setOperationParams:@"Get.AllGoodsSaleList" apiparam:apiparamString execOp:op];
     [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
@@ -741,22 +741,23 @@
         NSLog(@"error%@",[completedOperation responseString]);
     }];
     [engine enqueueOperation:op];
+
 }
 - (void)yearPressed:(id)sender
 {
     //格式化时间
     NSTimeInterval secondsPerDay = 26*60*60;
     NSDate *onDayBefore = [[NSDate alloc]initWithTimeIntervalSinceNow:-secondsPerDay];
-    NSDate *sevenDayBefore = [[NSDate alloc]initWithTimeIntervalSinceNow:-7*secondsPerDay];
+    NSDate *twoDayBefore = [[NSDate alloc]initWithTimeIntervalSinceNow:-2*secondsPerDay];
     NSDateFormatter  *dateformatter=[[NSDateFormatter alloc] init];
     [dateformatter setDateFormat:@"YYYY-MM-dd"];
-    NSString *  sevenDayBeforeString = [dateformatter stringFromDate:sevenDayBefore];
+    NSString *  twoDayBeforeString = [dateformatter stringFromDate:twoDayBefore];
     NSString *  oneDayBeforeString = [dateformatter stringFromDate:onDayBefore];
-    NSString *dateAppend = [NSString stringWithFormat:@"%@|%@",sevenDayBeforeString,oneDayBeforeString];
+    NSString *dateAppend = [NSString stringWithFormat:@"%@|%@",twoDayBeforeString,oneDayBeforeString];
     NSLog(@"dateAppend%@",dateAppend);
     MKNetworkEngine *engine = [YMGlobal getEngine];
     MKNetworkOperation *op = [YMGlobal getOpFromEngine:engine];
-    //NSString *apiparamString = [NSString stringWithFormat:@"\\\"date_range\\\":\\\"%@\\\",\\\"ordertype\\\":\\\"sell\\\"",dateAppend];
+    // NSString *apiparamString = [NSString stringWithFormat:@"\\\"date_range\\\":\\\"%@\\\",\\\"ordertype\\\":\\\"sell\\\"",dateAppend];
     NSString *apiparamString = [NSString stringWithFormat:@"\\\"date_range\\\":\\\"2012-1-1|2013-3-28\\\",\\\"ordertype\\\":\\\"sell\\\""];
     op = [YMGlobal setOperationParams:@"Get.AllGoodsSaleList" apiparam:apiparamString execOp:op];
     [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
@@ -773,5 +774,6 @@
         NSLog(@"error%@",[completedOperation responseString]);
     }];
     [engine enqueueOperation:op];
+
 }
 @end

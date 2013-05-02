@@ -303,16 +303,60 @@
     [self.inventoryTableView tableViewDidDragging];
 }
 
+//视图拖动完毕的时候
 -(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
     int state = 0;
-    //int countPage = 0;
+    int countPage = (int)ceil(self.goodsInventoryArray.count/9);
     state = [self.inventoryTableView tableViewDidEndDragging];
     if(state == k_RETURN_LOADMORE)
     {
-        
+        MKNetworkEngine *engine = [YMGlobal getEngine];
+        MKNetworkOperation *op = [YMGlobal getOpFromEngine:engine];
+        NSString *apiparam = [NSString stringWithFormat:@"\\\"wherestr\\\":\\\"\\\",\\\"pageindex\\\":%i,\\\"pagesize\\\":9,\\\"sort\\\":1,\\\"typeid\\\":\\\"\\\"",countPage];
+        op = [YMGlobal setOperationParams:@"Get.InventoryList" apiparam:apiparam execOp:op];
+        // op = [YMGlobal setOperationParams:@"Get.CategoryGoodsList" apiparam:@"" execOp:op];
+        [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
+            NSLog(@"%@",[completedOperation responseString]);
+            SBJson_Parser *parser = [[SBJson_Parser alloc]init];
+            NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
+            if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
+            {
+                NSMutableArray *bodyArray = [parser objectWithString:[data objectForKey:@"body"]];
+                for(id o in bodyArray)
+                {
+                    [self.goodsInventoryArray addObject:o];
+                }
+                if(bodyArray.count<9)
+                {
+                    [self.inventoryTableView reloadData:NO];
+                }else{
+                    [self.inventoryTableView reloadData:YES];
+                }
+            }
+        } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
+            NSLog(@"error%@",[completedOperation responseString]);
+        }];
+        [engine enqueueOperation:op];
     }else if (state == k_RETURN_REFRESH){
-        
+        MKNetworkEngine *engine = [YMGlobal getEngine];
+        MKNetworkOperation *op = [YMGlobal getOpFromEngine:engine];
+        op = [YMGlobal setOperationParams:@"Get.InventoryList" apiparam:@"\\\"wherestr\\\":\\\"\\\",\\\"pageindex\\\":1,\\\"pagesize\\\":9,\\\"sort\\\":1,\\\"typeid\\\":\\\"\\\"" execOp:op];
+        // op = [YMGlobal setOperationParams:@"Get.CategoryGoodsList" apiparam:@"" execOp:op];
+        [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
+            NSLog(@"%@",[completedOperation responseString]);
+            SBJson_Parser *parser = [[SBJson_Parser alloc]init];
+            NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
+            if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
+            {
+                NSMutableArray *bodyArray = [parser objectWithString:[data objectForKey:@"body"]];
+                self.goodsInventoryArray = bodyArray;
+                [self.inventoryTableView reloadData:YES];
+            }
+        } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
+            NSLog(@"error%@",[completedOperation responseString]);
+        }];
+        [engine enqueueOperation:op];
     }
 }
 
@@ -347,7 +391,7 @@
 {
     if(_firstCatTableView == nil)
     {
-        _firstCatTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, 140, 280)];
+        _firstCatTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, 140, 0)];
         _firstCatTableView.tag = 1;
         _firstCatTableView.backgroundColor = [UIColor colorWithRed:225/255.0 green:225/255.0 blue:225/255.0 alpha:1.0];
         _firstCatTableView.showsVerticalScrollIndicator = NO;
@@ -402,7 +446,7 @@
             [self.catView setFrame:CGRectMake(18, 34, 280, 0)];
             // UIView *catView = [[UIView alloc]initWithFrame:CGRectMake(18, 34, 280, 350)];
             [UIView commitAnimations];
-            [self.firstCatTableView removeFromSuperview];
+            [self.firstCatTableView setFrame:CGRectMake(0, 0, 140, 0)];
             [self.secondCatTableView removeFromSuperview];
         }else{
             CGSize size = [UIScreen mainScreen].bounds.size;
@@ -503,6 +547,11 @@
         [_catView setBackgroundColor:[UIColor colorWithRed:180/255.0 green:180/255.0 blue:180/255.0 alpha:1.0]];
     }
     [_catView addSubview:self.firstCatTableView];
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
+    [UIView setAnimationDelay:0.3];
+    [self.firstCatTableView setFrame:CGRectMake(0, 0, 140, 280)];
+    [UIView commitAnimations];
     //[_catView addSubview:self.secondCatTableView];
     return _catView;
 }
@@ -538,4 +587,6 @@
     [self.firstCatTableView removeFromSuperview];
     [self.secondCatTableView removeFromSuperview];
 }
+
+
 @end

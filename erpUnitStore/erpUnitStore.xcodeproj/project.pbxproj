@@ -35,6 +35,7 @@
 		4692E63F172B67A600A47953 /* PopupBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 4692E63B172B67A600A47953 /* PopupBox.m */; };
 		4692E647172B6A3400A47953 /* MonitorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4692E645172B6A3400A47953 /* MonitorViewController.m */; };
 		4692E648172B6A3400A47953 /* MonitorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4692E646172B6A3400A47953 /* MonitorViewController.xib */; };
+		46D91AD1173250C000F8BF70 /* cell_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46D91AD0173250C000F8BF70 /* cell_bg@2x.png */; };
 		AA27A24B1702D2740089463E /* GoodsInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA27A2491702D2740089463E /* GoodsInformationViewController.m */; };
 		AA27A24C1702D2740089463E /* GoodsInformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA27A24A1702D2740089463E /* GoodsInformationViewController.xib */; };
 		AA39EDD61704918800ED57BF /* RegistSNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA39EDD41704918800ED57BF /* RegistSNViewController.m */; };
@@ -180,6 +181,7 @@
 		4692E644172B6A3400A47953 /* MonitorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonitorViewController.h; sourceTree = "<group>"; };
 		4692E645172B6A3400A47953 /* MonitorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonitorViewController.m; sourceTree = "<group>"; };
 		4692E646172B6A3400A47953 /* MonitorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonitorViewController.xib; sourceTree = "<group>"; };
+		46D91AD0173250C000F8BF70 /* cell_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_bg@2x.png"; sourceTree = "<group>"; };
 		AA27A2481702D2740089463E /* GoodsInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsInformationViewController.h; sourceTree = "<group>"; };
 		AA27A2491702D2740089463E /* GoodsInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsInformationViewController.m; sourceTree = "<group>"; };
 		AA27A24A1702D2740089463E /* GoodsInformationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoodsInformationViewController.xib; sourceTree = "<group>"; };
@@ -671,6 +673,7 @@
 		AAB889A916FBF74900ED946F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				46D91AD0173250C000F8BF70 /* cell_bg@2x.png */,
 				468F42EB172A4656008A0B60 /* list_filter_focus.png */,
 				4692E614172B65CF00A47953 /* combo.png */,
 				4692E612172B65C400A47953 /* loading.png */,
@@ -1013,6 +1016,7 @@
 				4692E613172B65C400A47953 /* loading.png in Resources */,
 				4692E615172B65CF00A47953 /* combo.png in Resources */,
 				4692E648172B6A3400A47953 /* MonitorViewController.xib in Resources */,
+				46D91AD1173250C000F8BF70 /* cell_bg@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
