@@ -634,10 +634,18 @@
         NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
         if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
         {
-            NSMutableArray *bodyArray = [parser objectWithString:[data objectForKey:@"body"]];
-            GoodsSellListViewController *goodsSellListVC = [[GoodsSellListViewController alloc]init];
-            goodsSellListVC.goodsSellInformationArray = bodyArray;
-            [self.navigationController pushViewController:goodsSellListVC animated:YES];
+            if([data objectForKey:@"body"] == [NSNull null])
+            {
+                NSMutableArray *bodyArray = [[NSMutableArray alloc]init];
+                GoodsSellListViewController *goodsSellListVC = [[GoodsSellListViewController alloc]init];
+                goodsSellListVC.goodsSellInformationArray = bodyArray;
+                [self.navigationController pushViewController:goodsSellListVC animated:YES];
+            }else{
+                NSMutableArray *bodyArray = [parser objectWithString:[data objectForKey:@"body"]];
+                GoodsSellListViewController *goodsSellListVC = [[GoodsSellListViewController alloc]init];
+                goodsSellListVC.goodsSellInformationArray = bodyArray;
+                [self.navigationController pushViewController:goodsSellListVC animated:YES];
+            }
         }
     } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
         NSLog(@"error%@",[completedOperation responseString]);
@@ -666,10 +674,19 @@
         NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
         if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
         {
-            NSMutableArray *bodyArray = [parser objectWithString:[data objectForKey:@"body"]];
-            GoodsSellListViewController *goodsSellListVC = [[GoodsSellListViewController alloc]init];
-            goodsSellListVC.goodsSellInformationArray = bodyArray;
-            [self.navigationController pushViewController:goodsSellListVC animated:YES];
+            if([data objectForKey:@"body"] == [NSNull null])
+            {
+                NSMutableArray *bodyArray = [[NSMutableArray alloc]init];
+                GoodsSellListViewController *goodsSellListVC = [[GoodsSellListViewController alloc]init];
+                goodsSellListVC.goodsSellInformationArray = bodyArray;
+                [self.navigationController pushViewController:goodsSellListVC animated:YES];
+            }else{
+                NSMutableArray *bodyArray = [parser objectWithString:[data objectForKey:@"body"]];
+                GoodsSellListViewController *goodsSellListVC = [[GoodsSellListViewController alloc]init];
+                goodsSellListVC.goodsSellInformationArray = bodyArray;
+                [self.navigationController pushViewController:goodsSellListVC animated:YES];
+            }
+
         }
     } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
         NSLog(@"error%@",[completedOperation responseString]);
@@ -699,10 +716,19 @@
         NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
         if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
         {
-            NSMutableArray *bodyArray = [parser objectWithString:[data objectForKey:@"body"]];
-            GoodsSellListViewController *goodsSellListVC = [[GoodsSellListViewController alloc]init];
-            goodsSellListVC.goodsSellInformationArray = bodyArray;
-            [self.navigationController pushViewController:goodsSellListVC animated:YES];
+            if([data objectForKey:@"body"] == [NSNull null])
+            {
+                NSMutableArray *bodyArray = [[NSMutableArray alloc]init];
+                GoodsSellListViewController *goodsSellListVC = [[GoodsSellListViewController alloc]init];
+                goodsSellListVC.goodsSellInformationArray = bodyArray;
+                [self.navigationController pushViewController:goodsSellListVC animated:YES];
+            }else{
+                NSMutableArray *bodyArray = [parser objectWithString:[data objectForKey:@"body"]];
+                GoodsSellListViewController *goodsSellListVC = [[GoodsSellListViewController alloc]init];
+                goodsSellListVC.goodsSellInformationArray = bodyArray;
+                [self.navigationController pushViewController:goodsSellListVC animated:YES];
+            }
+
         }
     } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
         NSLog(@"error%@",[completedOperation responseString]);
@@ -732,10 +758,19 @@
         NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
         if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
         {
-            NSMutableArray *bodyArray = [parser objectWithString:[data objectForKey:@"body"]];
-            GoodsSellListViewController *goodsSellListVC = [[GoodsSellListViewController alloc]init];
-            goodsSellListVC.goodsSellInformationArray = bodyArray;
-            [self.navigationController pushViewController:goodsSellListVC animated:YES];
+            if([data objectForKey:@"body"] == [NSNull null])
+            {
+                NSMutableArray *bodyArray = [[NSMutableArray alloc]init];
+                GoodsSellListViewController *goodsSellListVC = [[GoodsSellListViewController alloc]init];
+                goodsSellListVC.goodsSellInformationArray = bodyArray;
+                [self.navigationController pushViewController:goodsSellListVC animated:YES];
+            }else{
+                NSMutableArray *bodyArray = [parser objectWithString:[data objectForKey:@"body"]];
+                GoodsSellListViewController *goodsSellListVC = [[GoodsSellListViewController alloc]init];
+                goodsSellListVC.goodsSellInformationArray = bodyArray;
+                [self.navigationController pushViewController:goodsSellListVC animated:YES];
+            }
+
         }
     } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
         NSLog(@"error%@",[completedOperation responseString]);
@@ -765,10 +800,19 @@
         NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
         if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
         {
-            NSMutableArray *bodyArray = [parser objectWithString:[data objectForKey:@"body"]];
-            GoodsSellListViewController *goodsSellListVC = [[GoodsSellListViewController alloc]init];
-            goodsSellListVC.goodsSellInformationArray = bodyArray;
-            [self.navigationController pushViewController:goodsSellListVC animated:YES];
+            if([data objectForKey:@"body"] == [NSNull null])
+            {
+                NSMutableArray *bodyArray = [[NSMutableArray alloc]init];
+                GoodsSellListViewController *goodsSellListVC = [[GoodsSellListViewController alloc]init];
+                goodsSellListVC.goodsSellInformationArray = bodyArray;
+                [self.navigationController pushViewController:goodsSellListVC animated:YES];
+            }else{
+                NSMutableArray *bodyArray = [parser objectWithString:[data objectForKey:@"body"]];
+                GoodsSellListViewController *goodsSellListVC = [[GoodsSellListViewController alloc]init];
+                goodsSellListVC.goodsSellInformationArray = bodyArray;
+                [self.navigationController pushViewController:goodsSellListVC animated:YES];
+            }
+
         }
     } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
         NSLog(@"error%@",[completedOperation responseString]);

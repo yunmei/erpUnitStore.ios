@@ -60,11 +60,20 @@
         NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
         if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
         {
-            NSMutableArray *bodyArray = [parser objectWithString:[data objectForKey:@"body"]];
-            LibraryViewController *libraryVC = [[LibraryViewController alloc]init];
-            UINavigationController *libraryNavigation = [[UINavigationController alloc]initWithRootViewController:libraryVC];
-            libraryVC.libraryArray = bodyArray;
-            [self presentViewController:libraryNavigation animated:YES completion:nil];
+            if([data objectForKey:@"body"] == [NSNull null])
+            {
+                LibraryViewController *libraryVC = [[LibraryViewController alloc]init];
+                UINavigationController *libraryNavigation = [[UINavigationController alloc]initWithRootViewController:libraryVC];
+                libraryVC.libraryArray = [[NSMutableArray alloc]init];
+                [self presentViewController:libraryNavigation animated:YES completion:nil];
+            }else{
+                NSMutableArray *bodyArray = [parser objectWithString:[data objectForKey:@"body"]];
+                LibraryViewController *libraryVC = [[LibraryViewController alloc]init];
+                UINavigationController *libraryNavigation = [[UINavigationController alloc]initWithRootViewController:libraryVC];
+                libraryVC.libraryArray = bodyArray;
+                [self presentViewController:libraryNavigation animated:YES completion:nil];
+            }
+
 //            GoodsInventoryViewController *goodsInventoryVC = [[GoodsInventoryViewController alloc]init];
 //            goodsInventoryVC.goodsInventoryArray = bodyArray;
 //            UINavigationController *inventoryNavigation = [[UINavigationController alloc]initWithRootViewController:goodsInventoryVC];
@@ -87,13 +96,23 @@
         NSLog(@"%@",[completedOperation responseString]);
         SBJson_Parser *parser = [[SBJson_Parser alloc]init];
         NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
-       if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
+       if([[data objectForKey:@"errcode"]isEqualToString:@"0"]||[[data objectForKey:@"errcode"]isEqualToString:@"200"])
        {
-           NSMutableArray *bodyArray = [parser objectWithString:[data objectForKey:@"body"]];
-           GoodsInventoryViewController *goodsInventoryVC = [[GoodsInventoryViewController alloc]init];
-           goodsInventoryVC.goodsInventoryArray = bodyArray;
-            UINavigationController *inventoryNavigation = [[UINavigationController alloc]initWithRootViewController:goodsInventoryVC];
-           [self presentViewController:inventoryNavigation animated:YES completion:nil];
+           if([data objectForKey:@"body"] == [NSNull null])
+           {
+               
+               GoodsInventoryViewController *goodsInventoryVC = [[GoodsInventoryViewController alloc]init];
+               goodsInventoryVC.goodsInventoryArray = [[NSMutableArray alloc]init];
+               UINavigationController *inventoryNavigation = [[UINavigationController alloc]initWithRootViewController:goodsInventoryVC];
+               [self presentViewController:inventoryNavigation animated:YES completion:nil];
+           }else{
+               NSMutableArray *bodyArray = [parser objectWithString:[data objectForKey:@"body"]];
+               //if(bodyArray )
+               GoodsInventoryViewController *goodsInventoryVC = [[GoodsInventoryViewController alloc]init];
+               goodsInventoryVC.goodsInventoryArray = bodyArray;
+               UINavigationController *inventoryNavigation = [[UINavigationController alloc]initWithRootViewController:goodsInventoryVC];
+               [self presentViewController:inventoryNavigation animated:YES completion:nil];
+           }
        }
     } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
         NSLog(@"error%@",[completedOperation responseString]);
@@ -114,11 +133,19 @@
         [hud hide:YES];
         if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
         {
-            NSMutableArray *bodyArray = [parser objectWithString:[data objectForKey:@"body"]];
-            SuppliersListViewController *supplierListVC = [[SuppliersListViewController alloc]init];
-            supplierListVC.supplierListArray = bodyArray;
-            UINavigationController *supplierNavigation = [[UINavigationController alloc]initWithRootViewController:supplierListVC];
-            [self presentViewController:supplierNavigation animated:YES completion:nil];
+            if([data objectForKey:@"body"] == [NSNull null])
+            {
+                SuppliersListViewController *supplierListVC = [[SuppliersListViewController alloc]init];
+                supplierListVC.supplierListArray = [[NSMutableArray alloc]init];
+                UINavigationController *supplierNavigation = [[UINavigationController alloc]initWithRootViewController:supplierListVC];
+                [self presentViewController:supplierNavigation animated:YES completion:nil];
+            }else{
+                NSMutableArray *bodyArray = [parser objectWithString:[data objectForKey:@"body"]];
+                SuppliersListViewController *supplierListVC = [[SuppliersListViewController alloc]init];
+                supplierListVC.supplierListArray = bodyArray;
+                UINavigationController *supplierNavigation = [[UINavigationController alloc]initWithRootViewController:supplierListVC];
+                [self presentViewController:supplierNavigation animated:YES completion:nil];
+            }
 //            GoodsInventoryViewController *goodsInventoryVC = [[GoodsInventoryViewController alloc]init];
 //            goodsInventoryVC.goodsInventoryArray = bodyArray;
 //            UINavigationController *inventoryNavigation = [[UINavigationController alloc]initWithRootViewController:goodsInventoryVC];

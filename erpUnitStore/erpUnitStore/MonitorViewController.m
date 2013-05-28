@@ -47,7 +47,7 @@
     NSString *initData = [boxData objectAtIndex:0];
     m_nPTZ = 0;
     myPopUpBox.selectContentLabel.text = initData;
-    [self.view addSubview:myPopUpBox];
+    //[self.view addSubview:myPopUpBox];
 }
 
 - (void)didReceiveMemoryWarning

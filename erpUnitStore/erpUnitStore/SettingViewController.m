@@ -164,70 +164,81 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(indexPath.section == 1)
+    if(tableView.tag == 0)
     {
-        if(indexPath.row ==0)
+        if(indexPath.section == 1)
         {
-            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"缓存已清除" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-            [alert show];
-        }else if(indexPath.row == 1){
-            SetPasswordViewController *setPassVC = [[SetPasswordViewController alloc]init];
-            [self.navigationController pushViewController:setPassVC animated:YES];
-        }else{
-            [self.view addSubview:self.backgroundView];
-            MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-            MKNetworkEngine *engine = [YMGlobal getEngine];
-            MKNetworkOperation *op = [YMGlobal getOpFromEngine:engine];
-            NSString *apiparam = [NSString stringWithFormat:@""];
-            op = [YMGlobal setOperationParams:@"Get.ShopList" apiparam:apiparam execOp:op];
-            [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
-                NSLog(@"completed%@",[completedOperation responseString]);
-                SBJson_Parser *parser = [[SBJson_Parser alloc]init];
-                NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
-                if(!([data objectForKey:@"body"] == [NSNull null]))
-                {
-                    [self.view bringSubviewToFront:self.shoplistTableView];
-                    self.shoplistArray = [parser objectWithString:[data objectForKey:@"body"]];
-                    [self.shoplistTableView reloadData];
-                    [UIView beginAnimations:nil context:nil];
-                    [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
-                    [UIView setAnimationDuration:0.3];
-                    int i = [self.shoplistArray count];
-                    if(i>5)
+            if(indexPath.row ==0)
+            {
+                UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"缓存已清除" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+                [alert show];
+            }else if(indexPath.row == 1){
+                SetPasswordViewController *setPassVC = [[SetPasswordViewController alloc]init];
+                [self.navigationController pushViewController:setPassVC animated:YES];
+            }else{
+                NSLog(@"123123");
+                [self.view addSubview:self.backgroundView];
+                MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+                MKNetworkEngine *engine = [YMGlobal getEngine];
+                MKNetworkOperation *op = [YMGlobal getOpFromEngine:engine];
+                NSString *apiparam = [NSString stringWithFormat:@""];
+                op = [YMGlobal setOperationParams:@"Get.ShopList" apiparam:apiparam execOp:op];
+                [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
+                    NSLog(@"completed%@",[completedOperation responseString]);
+                    SBJson_Parser *parser = [[SBJson_Parser alloc]init];
+                    NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
+                    if(!([data objectForKey:@"body"] == [NSNull null]))
                     {
-                        i=5;
+                        [self.view bringSubviewToFront:self.shoplistTableView];
+                        self.shoplistArray = [parser objectWithString:[data objectForKey:@"body"]];
+                        [self.shoplistTableView reloadData];
+                        [UIView beginAnimations:nil context:nil];
+                        [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
+                        [UIView setAnimationDuration:0.3];
+                        int i = [self.shoplistArray count];
+                        if(i>5)
+                        {
+                            i=5;
+                        }
+                        [self.shoplistTableView setFrame:CGRectMake(72, 190, 180, i*40)];
+                        self.shoplistTableView.layer.borderWidth = 1;
+                        [UIView commitAnimations];
                     }
-                    [self.shoplistTableView setFrame:CGRectMake(72, 190, 180, i*40)];
-                    self.shoplistTableView.layer.borderWidth = 1;
-                    [UIView commitAnimations];
-                }
-                [hud hide:YES];
-            } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
-                [hud hide:YES];
-                NSLog(@"error%@",[completedOperation responseString]);
-            }];
-            [engine enqueueOperation:op];
-
-        }
-    }else if (indexPath.section ==2){
-        if(indexPath.row == 0)
-        {
-            HelpViewController *helplistView = [[HelpViewController alloc]init];
-            helplistView.requestString = [[NSURL alloc]initWithString:@"http://www.maimaicha.com"];
-            UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithTitle:@"返回" style:UIBarButtonItemStyleBordered target:self action:nil];
-            self.navigationItem.backBarButtonItem = backItem;
-            [self.navigationController pushViewController:helplistView animated:YES];
-        }else if (indexPath.row ==1){
-            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"当前已经是最新版本" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-            [alert show];
+                    [hud hide:YES];
+                } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
+                    [hud hide:YES];
+                    NSLog(@"error%@",[completedOperation responseString]);
+                }];
+                [engine enqueueOperation:op];
+                
+            }
+        }else if (indexPath.section ==2){
+            if(indexPath.row == 0)
+            {
+                HelpViewController *helplistView = [[HelpViewController alloc]init];
+                helplistView.requestString = [[NSURL alloc]initWithString:@"http://www.maimaicha.com"];
+                UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithTitle:@"返回" style:UIBarButtonItemStyleBordered target:self action:nil];
+                self.navigationItem.backBarButtonItem = backItem;
+                [self.navigationController pushViewController:helplistView animated:YES];
+            }else if (indexPath.row ==1){
+                UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"当前已经是最新版本" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+                [alert show];
             }else{
                 UserSurggestViewController *userSurggestView = [[UserSurggestViewController alloc]init];
                 UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithTitle:@"返回" style:UIBarButtonItemStyleBordered target:self action:nil];
                 self.navigationItem.backBarButtonItem = backItem;
                 [self.navigationController pushViewController:userSurggestView animated:YES];
+            }
+        }else if (indexPath.section == 0){
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.maimaicha.com"]];
         }
-    }else if (indexPath.section == 0){
-         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.maimaicha.com"]];
+
+    }else if (tableView.tag ==1){
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setObject:[[self.shoplistArray objectAtIndex:indexPath.row] objectForKey:@"Shop_ID"] forKey:@"appkey"];
+        [defaults synchronize];
+        [self.shoplistTableView setFrame:CGRectMake(72, 190, 180, 0)];
+        [self.backgroundView removeFromSuperview];
     }
 }
 
