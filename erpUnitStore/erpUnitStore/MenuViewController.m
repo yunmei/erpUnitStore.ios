@@ -90,7 +90,7 @@
 - (IBAction)kcManage:(id)sender {
     MKNetworkEngine *engine = [YMGlobal getEngine];
     MKNetworkOperation *op = [YMGlobal getOpFromEngine:engine];
-    op = [YMGlobal setOperationParams:@"Get.InventoryList" apiparam:@"\\\"wherestr\\\":\\\"\\\",\\\"pageindex\\\":1,\\\"pagesize\\\":9,\\\"sort\\\":1,\\\"typeid\\\":\\\"\\\"" execOp:op];
+    op = [YMGlobal setOperationParams:@"Get.InventoryList" apiparam:@"\\\"wherestr\\\":\\\"\\\",\\\"pageindex\\\":1,\\\"pagesize\\\":10,\\\"sort\\\":2,\\\"typeid\\\":\\\"\\\"" execOp:op];
      // op = [YMGlobal setOperationParams:@"Get.CategoryGoodsList" apiparam:@"" execOp:op];
     [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
         NSLog(@"%@",[completedOperation responseString]);
@@ -162,10 +162,31 @@
 - (IBAction)getBill:(id)sender {
 }
 
-//应付账款
+//视频寻店
 - (IBAction)suppliersManage:(id)sender {
-   MonitorViewController *monitorVC = [[MonitorViewController alloc]init];
-    [self presentViewController:monitorVC animated:YES completion:nil];
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    MKNetworkEngine *engine = [YMGlobal getEngine];
+    MKNetworkOperation *op = [YMGlobal getOpFromEngine:engine];
+    op = [YMGlobal setOperationParams:@"Get.VideoInfo" apiparam:@"\\\"shop_id\\\":\\\"\\\"" execOp:op];
+    [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
+        SBJson_Parser *parser = [[SBJson_Parser alloc]init];
+        NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
+        if([[data objectForKey:@"errcode"]isEqualToString:@"0"]||[[data objectForKey:@"errcode"]isEqualToString:@"200"])
+        {
+             [hud hide:YES];
+            MonitorViewController *monitorVC = [[MonitorViewController alloc]init];
+            NSMutableArray *infoArray = [parser objectWithString:[data objectForKey:@"body"]];
+            monitorVC.shopInfo = [infoArray objectAtIndex:0];
+            NSLog(@"%@",monitorVC.shopInfo);
+            [self presentViewController:monitorVC animated:YES completion:nil];
+        }
+    } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
+        [hud hide:YES];
+        NSLog(@"error%@",[completedOperation responseString]);
+    }];
+    [engine enqueueOperation:op];
+
+
 }
 
 //会员管理

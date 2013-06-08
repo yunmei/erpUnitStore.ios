@@ -54,7 +54,7 @@
     {
        baseString = [NSMutableString stringWithFormat:@"{\"myparams\":{\"version\":\"2.0\",\"format\":\"json\",\"appkey\":\"%@\",\"secretkey\":\"%@\",\"apiname\":\"",[defaults objectForKey:@"appkey"],[defaults objectForKey:@"secretkey"]];
     }else{
-        baseString = [[NSMutableString alloc]initWithString:@"{\"myparams\":{\"version\":\"2.0\",\"format\":\"json\",\"appkey\":\"9832C19A-1BB4-4E67-920A-04CD5E1B25B2\",\"secretkey\":\"d++ytcOds2TuuDhG7SWS7f40A5VcPYnH30B66ye8YTVY3gjNQTyJZArShDyVYmZqu8Y8yAQuHu4V1+K9YAnr9pz4VxawLayzJ7dyjCrV7Vm68nZ2U7IANO1wBJ50lAbuBHBz1LBhtRqkk706qmYuFFWEO9zcaLhRRX2xiTafDYs=\",\"apiname\":\""];
+        baseString = [[NSMutableString alloc]initWithString:@"{\"myparams\":{\"version\":\"2.0\",\"format\":\"json\",\"appkey\":\"9832C19A-1BB4-4E67-920A-04CD5E1B25B2\",\"secretkey\":\"ALgSI41y/tavXG0PpqksOzAdgKCGpdufh8WFk/WfTWOQPnMInER8qXRVuPsTLcNF1rRJXz3oQkICAyxpsM+eVaWR8K1vfvrmDSCJ/nL8Dd3zTeM1OUF6EwsKChSZzd0LqxooSJJR+Xa733EEEFIAbWhdwLdEs/sz9h8Xkoh6aLA=\",\"apiname\":\""];
     }
 //    {
 //        NSMutableString *baseString = [[NSMutableString alloc]initWithString:@"{\"myparams\":{\"version\":\"2.0\",\"format\":\"json\",\"appkey\":\"%@\",\"secretkey\":\"%@\",\"apiname\":\"",[defaults objectForKey:@"appkey"],[defaults objectForKey:@"secretkey"]];

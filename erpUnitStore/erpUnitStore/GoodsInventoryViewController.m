@@ -168,19 +168,21 @@
         }];
         [engine enqueueOperation:op];
     }else{
+        NSLog(@"2222");
         self.selectedCatId = [[self.secondCatArray objectAtIndex:indexPath.row] objectForKey:@"Type_ID"];
         
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         MKNetworkEngine *engine = [YMGlobal getEngine];
         MKNetworkOperation *op = [YMGlobal getOpFromEngine:engine];
-          NSString *apiparamString = [NSString stringWithFormat:@"\\\"wherestr\\\":\\\"\\\",\\\"pageindex\\\":1,\\\"pagesize\\\":100,\\\"sort\\\":1,\\\"typeid\\\":\\\"%@\\\"",self.selectedCatId];
+          NSString *apiparamString = [NSString stringWithFormat:@"\\\"wherestr\\\":\\\"\\\",\\\"pageindex\\\":1,\\\"pagesize\\\":100,\\\"sort\\\":2,\\\"typeid\\\":\\\"%@\\\"",self.selectedCatId];
          op = [YMGlobal setOperationParams:@"Get.InventoryList" apiparam:apiparamString execOp:op];
         //op = [YMGlobal setOperationParams:@"Get.CategoryGoodsList" apiparam:apiparamString execOp:op];
         [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
+            NSLog(@"22222%@",[completedOperation responseString]);
             SBJson_Parser *parser = [[SBJson_Parser alloc]init];
             NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
             [hud hide:YES];
-            if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
+            if([[data objectForKey:@"errcode"]isEqualToString:@"0"]||[[data objectForKey:@"errcode"]isEqualToString:@"200"])
             {
                 if([data objectForKey:@"body"] == [NSNull null])
                 {
@@ -316,7 +318,7 @@
         [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
             SBJson_Parser *parser = [[SBJson_Parser alloc]init];
             NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
-            if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
+            if([[data objectForKey:@"errcode"]isEqualToString:@"0"]||[[data objectForKey:@"errcode"]isEqualToString:@"200"])
             {
                 NSMutableArray *bodyArray = [parser objectWithString:[data objectForKey:@"body"]];
                 for(id o in bodyArray)
@@ -342,7 +344,7 @@
         [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
             SBJson_Parser *parser = [[SBJson_Parser alloc]init];
             NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
-            if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
+            if([[data objectForKey:@"errcode"]isEqualToString:@"0"]||[[data objectForKey:@"errcode"]isEqualToString:@"200"])
             {
                 NSMutableArray *bodyArray = [parser objectWithString:[data objectForKey:@"body"]];
                 self.goodsInventoryArray = bodyArray;
@@ -462,9 +464,8 @@
                 SBJson_Parser *parser = [[SBJson_Parser alloc]init];
                 NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
                 [hud hide:YES];
-                if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
+                if([[data objectForKey:@"errcode"]isEqualToString:@"0"]||[[data objectForKey:@"errcode"]isEqualToString:@"200"])
                 {
-                    NSLog(@"%@111111",[completedOperation responseString]);
                     self.firstCatArray = [parser objectWithString:[data objectForKey:@"body"]];
                     [self.firstCatTableView reloadData];
                 }
@@ -480,12 +481,12 @@
     }else if (pressedButton.tag == 22){
         MKNetworkEngine *engine = [YMGlobal getEngine];
         MKNetworkOperation *op = [YMGlobal getOpFromEngine:engine];
-        op = [YMGlobal setOperationParams:@"Get.InventoryList" apiparam:@"\\\"wherestr\\\":\\\"\\\",\\\"pageindex\\\":1,\\\"pagesize\\\":100,\\\"sort\\\":1,\\\"typeid\\\":\\\"\\\"" execOp:op];
+        op = [YMGlobal setOperationParams:@"Get.InventoryList" apiparam:@"\\\"wherestr\\\":\\\"\\\",\\\"pageindex\\\":1,\\\"pagesize\\\":100,\\\"sort\\\":2,\\\"typeid\\\":\\\"\\\"" execOp:op];
         // op = [YMGlobal setOperationParams:@"Get.CategoryGoodsList" apiparam:@"" execOp:op];
         [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
             SBJson_Parser *parser = [[SBJson_Parser alloc]init];
             NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
-            if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
+            if([[data objectForKey:@"errcode"]isEqualToString:@"0"]||[[data objectForKey:@"errcode"]isEqualToString:@"200"])
             {
                 if([data objectForKey:@"body"] == [NSNull null])
                 {
@@ -509,7 +510,7 @@
         [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
             SBJson_Parser *parser = [[SBJson_Parser alloc]init];
             NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
-            if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
+            if([[data objectForKey:@"errcode"]isEqualToString:@"0"]||[[data objectForKey:@"errcode"]isEqualToString:@"200"])
             {
                 if([data objectForKey:@"body"] == [NSNull null])
                 {
@@ -533,7 +534,7 @@
         [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
             SBJson_Parser *parser = [[SBJson_Parser alloc]init];
             NSMutableDictionary *data = [parser objectWithData:[completedOperation responseData]];
-            if([[data objectForKey:@"errcode"]isEqualToString:@"0"])
+            if([[data objectForKey:@"errcode"]isEqualToString:@"0"]||[[data objectForKey:@"errcode"]isEqualToString:@"200"])
             {
                 if([data objectForKey:@"body"] == [NSNull null])
                 {

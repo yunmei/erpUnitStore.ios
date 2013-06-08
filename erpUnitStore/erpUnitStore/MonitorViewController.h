@@ -17,13 +17,9 @@
     
     int     m_nPTZ;
 }
-@property (strong, nonatomic) IBOutlet UITextField *serverTextField;
-@property (strong, nonatomic) IBOutlet UITextField *portTextField;
-@property (strong, nonatomic) IBOutlet UITextField *userTextField;
-@property (strong, nonatomic) IBOutlet UITextField *pswTextFeild;
 @property (strong, nonatomic) IBOutlet UITextField *channelTextFeild;
 @property (strong, nonatomic) IBOutlet VideoWnd *playView;
-
+@property (strong, nonatomic) NSMutableDictionary *shopInfo;
 
 - (IBAction)login:(id)sender;
 

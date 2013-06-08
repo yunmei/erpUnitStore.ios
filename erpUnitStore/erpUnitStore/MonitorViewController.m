@@ -8,12 +8,14 @@
 
 #import "MonitorViewController.h"
 #import "ErpViewController.h"
+#import "MBProgressHUD.h"
 @interface MonitorViewController ()
 
 @end
 
 @implementation MonitorViewController
-@synthesize serverTextField,portTextField,userTextField,pswTextFeild,channelTextFeild,playView;
+@synthesize channelTextFeild,playView;
+@synthesize shopInfo;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -56,7 +58,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)login:(id)sender {
+- (void)login{
     if (m_hLogin > 0)
 	{
 		[AVNetSDK AV_Logout:m_hLogin];
@@ -64,10 +66,10 @@
 	
     AV_IN_Login InParam = {0};
     InParam.nStructSize = sizeof(AV_IN_Login);
-    InParam.szDevIp = (char *)[self.serverTextField.text UTF8String];
-    InParam.nDevPort = [self.portTextField.text intValue];
-    InParam.szDevUser = (char *)[self.userTextField.text UTF8String];
-    InParam.szDevPwd = (char *)[self.pswTextFeild.text UTF8String];
+    InParam.szDevIp = (char *)[[self.shopInfo objectForKey:@"Address"] UTF8String];
+    InParam.nDevPort = [[self.shopInfo objectForKey:@"Post"] intValue];
+    InParam.szDevUser = (char *)[[self.shopInfo objectForKey:@"UserName"] UTF8String];
+    InParam.szDevPwd = (char *)[[self.shopInfo objectForKey:@"UserPwd"] UTF8String];
     InParam.bReconnect = FALSE;
     InParam.pConnStatusCallback = self;
     InParam.pUserParam = NULL;
@@ -79,48 +81,12 @@
     
 	if (lLoginID > 0)
 	{
-		MSG(@"登录",@"成功",@"确定")
 		
 		m_hLogin = lLoginID;
 	}
 	else
 	{
-		switch (outParam.emErrorCode)
-        {
-            case AV_Login_Error_Timeout:
-                MSG(@"失败",@"没有响应！",@"确定")
-                break;
-                
-            case AV_Login_Error_Password:
-                MSG(@"失败",@"密码不正确！",@"确定")
-                break;
-                
-            case AV_Login_Error_UserName:
-                MSG(@"失败",@"帐号不存在！",@"确定")
-                break;
-                
-            case AV_Login_Error_ReLogin:
-                MSG(@"失败",@"帐号已登录！",@"确定")
-                break;
-                
-            case AV_Login_Error_Locked:
-                MSG(@"失败",@"帐号被锁定！",@"确定")
-                break;
-                
-            case AV_Login_Error_Blacklist:
-                MSG(@"失败",@"帐号被列入黑名单！",@"确定")
-                break;
-                
-                
-            case AV_Login_Error_DeviceBusy:
-                MSG(@"失败",@"资源不足，系统忙！",@"确定")
-                break;
-                
-                
-            default:
-                MSG(@"登录",@"失败",@"确定")
-                break;
-        }
+
 	}
     
 }
@@ -137,8 +103,9 @@
 }
 
 - (IBAction)start:(id)sender {
-    
-	if (m_hLogin > 0)
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [self login];
+    if (m_hLogin > 0)
 	{
         float fDisplayScale = 1.0;
         if ([UIScreen instancesRespondToSelector:@selector(scale)])
@@ -161,7 +128,7 @@
         outParamRealPlay.nStructSize = sizeof(AV_OUT_RealPlay);
         
 		AV_HANDLE lRealPlayID =	[AVNetSDK AV_RealPlay:m_hLogin In:&inParamRealPlay Out:&outParamRealPlay];
-		
+		[hud hide:YES];
 		if (lRealPlayID > 0)
 		{
 			MSG(@"监视",@"成功",@"确定")
@@ -191,10 +158,6 @@
 }
 
 - (IBAction)backgroundTap:(id)sender {
-    [self.portTextField resignFirstResponder];
-    [self.serverTextField resignFirstResponder];
-    [self.userTextField resignFirstResponder];
-    [self.pswTextFeild resignFirstResponder];
     [self.channelTextFeild resignFirstResponder];
 }
 
